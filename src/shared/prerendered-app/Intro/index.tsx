@@ -405,11 +405,11 @@ export default class Intro extends Component<Props, State> {
             </svg>
             <div class={style.footerPadding}>
               <footer class={style.footerItems}>
-                <a
-                  class={style.footerLink}
-                  href="https://github.com/marianocorvatta/shrinkimg/blob/dev/README.md#privacy"
-                >
+                <a class={style.footerLink} href="/privacy">
                   Privacy
+                </a>
+                <a class={style.footerLink} href="/terms">
+                  Terms
                 </a>
                 <a
                   class={style.footerLinkWithLogo}

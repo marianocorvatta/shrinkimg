@@ -14,6 +14,8 @@ import { h } from 'preact';
 
 import { renderPage, writeFiles } from './utils';
 import IndexPage from './pages/index';
+import PrivacyPage from './pages/privacy';
+import TermsPage from './pages/terms';
 import * as iconLargeMaskable from 'img-url:static-build/assets/icon-large-maskable.png';
 import * as iconLarge from 'img-url:static-build/assets/icon-large.png';
 import * as screenshot1 from 'img-url:static-build/assets/screenshot1.png';
@@ -54,6 +56,8 @@ interface Output {
 
 const toOutput: Output = {
   'index.html': renderPage(<IndexPage />),
+  'privacy/index.html': renderPage(<PrivacyPage />),
+  'terms/index.html': renderPage(<TermsPage />),
   'manifest.json': JSON.stringify({
     name: 'ShrinkImg',
     short_name: 'ShrinkImg',
@@ -117,6 +121,12 @@ const toOutput: Output = {
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
         <loc>https://shrinkimg.com/</loc>
+      </url>
+      <url>
+        <loc>https://shrinkimg.com/privacy</loc>
+      </url>
+      <url>
+        <loc>https://shrinkimg.com/terms</loc>
       </url>
     </urlset>
   `,
