@@ -429,6 +429,9 @@ export default class Intro extends Component<Props, State> {
                 >
                   {t('footer.guides')}
                 </a>
+                <a class={style.footerLink} href={`${prefix}/blog`}>
+                  {t('footer.blog')}
+                </a>
                 <a
                   class={style.footerLinkWithLogo}
                   href="https://github.com/marianocorvatta/shrinkimg"

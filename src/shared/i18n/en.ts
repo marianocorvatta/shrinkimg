@@ -107,6 +107,17 @@ const en = {
 
   'legal.backToShrinkImg': '\u2190 Back to ShrinkImg',
 
+  'footer.blog': 'Blog',
+  'blog.title': 'Blog \u2014 ShrinkImg',
+  'blog.description':
+    'Image compression tips, format guides and web performance insights.',
+  'blog.readMore': 'Read more \u2192',
+  'blog.noPosts': 'No posts yet. Check back soon!',
+  'blog.author': 'ShrinkImg Team',
+  'blog.toc': 'Table of contents',
+  'blog.cta': 'Try ShrinkImg Free',
+  'blog.relatedPosts': 'Related Posts',
+
   'structuredData.description':
     'Free online image compressor. Shrink JPG, PNG, WebP and AVIF files instantly in your browser. No upload needed — 100% private.',
 } as const;

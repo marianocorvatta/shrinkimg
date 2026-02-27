@@ -1,0 +1,124 @@
+:global(.blog-meta) {
+  color: var(--color-text-muted, #94a3b8);
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+:global(.blog-toc) {
+  background: var(--color-bg-muted, #f1f5f9);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+}
+
+:global(.blog-toc) h2 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+}
+
+:global(.blog-toc) ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+:global(.blog-toc) li {
+  margin-bottom: 0.25rem;
+}
+
+:global(.blog-toc) li:global(.blog-toc-h3) {
+  padding-left: 1rem;
+}
+
+:global(.blog-toc) a {
+  color: var(--color-primary, #2ec4b6);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+:global(.blog-toc) a:hover {
+  text-decoration: underline;
+}
+
+:global(.blog-cta) {
+  display: inline-block;
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary, #2ec4b6);
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none !important;
+  transition: opacity 0.2s;
+}
+
+:global(.blog-cta):hover {
+  opacity: 0.85;
+}
+
+:global(.blog-related) {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border, #e2e8f0);
+}
+
+:global(.blog-related) h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+:global(.blog-post-card) {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border, #e2e8f0);
+}
+
+:global(.blog-post-card):last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+:global(.blog-post-card) h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.25rem;
+}
+
+:global(.blog-post-card) h2 a {
+  color: var(--color-heading, #1b2838);
+  text-decoration: none;
+}
+
+:global(.blog-post-card) h2 a:hover {
+  color: var(--color-primary, #2ec4b6);
+}
+
+:global(.blog-post-card) :global(.blog-meta) {
+  margin-bottom: 0.5rem;
+}
+
+:global(.blog-post-card) p {
+  margin: 0 0 0.5rem;
+}
+
+:global(.blog-post-card) :global(.blog-read-more) {
+  color: var(--color-primary, #2ec4b6);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+:global(.blog-post-card) :global(.blog-read-more):hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  :global(.blog-toc) {
+    padding: 0.75rem 1rem;
+  }
+
+  :global(.blog-post-card) h2 {
+    font-size: 1.1rem;
+  }
+}

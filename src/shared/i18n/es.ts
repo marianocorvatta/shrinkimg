@@ -111,6 +111,17 @@ const es: TranslationStrings = {
 
   'legal.backToShrinkImg': '\u2190 Volver a ShrinkImg',
 
+  'footer.blog': 'Blog',
+  'blog.title': 'Blog \u2014 ShrinkImg',
+  'blog.description':
+    'Consejos de compresi\u00f3n de im\u00e1genes, gu\u00edas de formatos y optimizaci\u00f3n web.',
+  'blog.readMore': 'Leer m\u00e1s \u2192',
+  'blog.noPosts': 'A\u00fan no hay publicaciones. \u00a1Volv\u00e9 pronto!',
+  'blog.author': 'Equipo ShrinkImg',
+  'blog.toc': 'Tabla de contenidos',
+  'blog.cta': 'Prob\u00e1 ShrinkImg Gratis',
+  'blog.relatedPosts': 'Posts Relacionados',
+
   'structuredData.description':
     'Compresor de im\u00e1genes online gratis. Reduce archivos JPG, PNG, WebP y AVIF al instante en tu navegador. Sin subir nada \u2014 100% privado.',
 };

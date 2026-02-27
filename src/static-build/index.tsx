@@ -21,6 +21,9 @@ import JpgVsPngVsWebpVsAvifPage from './pages/guides/jpg-vs-png-vs-webp-vs-avif'
 import CompressImagesForWebPage from './pages/guides/compress-images-for-web';
 import WhatIsWebpPage from './pages/guides/what-is-webp';
 import NotFoundPage from './pages/404';
+import BlogIndex from './pages/blog/BlogIndex';
+import BlogPost from './pages/blog/BlogPost';
+import { blogPosts } from './pages/blog/posts';
 import { initI18n, getStrings, supportedLocales } from 'shared/i18n';
 import type { Locale } from 'shared/i18n';
 import * as iconLargeMaskable from 'img-url:static-build/assets/icon-large-maskable.png';
@@ -92,6 +95,12 @@ const sitemapUrls = [
     enPath: '/guides/what-is-webp',
     esPath: '/es/guides/what-is-webp',
   },
+  { path: 'blog', enPath: '/blog', esPath: '/es/blog' },
+  ...blogPosts.map((post) => ({
+    path: `blog/${post.slug}`,
+    enPath: `/blog/${post.slug}`,
+    esPath: `/es/blog/${post.slug}`,
+  })),
 ];
 
 const sitemapXml = dedent`
@@ -158,6 +167,10 @@ const toOutput: Output = {
     CompressImagesForWebPage,
   ),
   'es/guides/what-is-webp/index.html': renderLocalePage('es', WhatIsWebpPage),
+
+  // Blog pages
+  'blog/index.html': renderLocalePage('en', BlogIndex),
+  'es/blog/index.html': renderLocalePage('es', BlogIndex),
 
   // 404 page
   '404.html': renderPage(<NotFoundPage />),
@@ -226,5 +239,17 @@ const toOutput: Output = {
     /* /404.html 404
   `,
 };
+
+// Generate individual blog post pages
+for (const post of blogPosts) {
+  toOutput[`blog/${post.slug}/index.html`] = renderLocalePage('en', BlogPost, {
+    post,
+  });
+  toOutput[`es/blog/${post.slug}/index.html`] = renderLocalePage(
+    'es',
+    BlogPost,
+    { post },
+  );
+}
 
 writeFiles(toOutput);
