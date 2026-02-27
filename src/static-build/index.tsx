@@ -111,6 +111,7 @@ const toOutput: Output = {
       Cross-Origin-Embedder-Policy: credentialless
       Cross-Origin-Opener-Policy: same-origin
   `,
+  'ads.txt': `google.com, pub-5131765795912837, DIRECT, f08c47fec0942fa0\n`,
   'robots.txt': dedent`
     User-agent: *
     Allow: /
