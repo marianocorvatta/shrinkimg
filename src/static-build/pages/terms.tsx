@@ -27,6 +27,11 @@ const TermsPage: FunctionalComponent = () => (
         rel="stylesheet"
       />
       <link rel="canonical" href={`${siteOrigin}/terms`} />
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5131765795912837"
+        crossOrigin="anonymous"
+      />
       <style
         dangerouslySetInnerHTML={{ __html: escapeStyleScriptContent(baseCss) }}
       />

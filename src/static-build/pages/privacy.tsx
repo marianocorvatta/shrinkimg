@@ -27,6 +27,11 @@ const PrivacyPage: FunctionalComponent = () => (
         rel="stylesheet"
       />
       <link rel="canonical" href={`${siteOrigin}/privacy`} />
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5131765795912837"
+        crossOrigin="anonymous"
+      />
       <style
         dangerouslySetInnerHTML={{ __html: escapeStyleScriptContent(baseCss) }}
       />

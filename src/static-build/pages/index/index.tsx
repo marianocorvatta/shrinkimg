@@ -68,7 +68,11 @@ const Index: FunctionalComponent<Props> = () => (
       />
       <link rel="manifest" href="/manifest.json" />
       <link rel="canonical" href={siteOrigin} />
-      {/* PASTE GOOGLE ADSENSE SCRIPT HERE */}
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5131765795912837"
+        crossOrigin="anonymous"
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
