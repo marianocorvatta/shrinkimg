@@ -35,6 +35,18 @@
 
 .logo-container {
   margin: 5rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-tagline {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .logo {
@@ -363,5 +375,50 @@
 .drop-text {
   @media (max-width: 599px) {
     display: none;
+  }
+}
+
+.faq-list {
+  margin-top: 2rem;
+  max-width: 700px;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--light-gray, #e0e0e0);
+  padding: 1rem 0;
+
+  & summary {
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--off-black);
+
+    &::after {
+      content: '+';
+      font-size: 1.4em;
+      font-weight: 300;
+      flex-shrink: 0;
+      margin-left: 1rem;
+      transition: transform 200ms ease;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &[open] summary::after {
+    transform: rotate(45deg);
+  }
+
+  & p {
+    margin: 0.75rem 0 0.25rem;
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--dim-text);
   }
 }

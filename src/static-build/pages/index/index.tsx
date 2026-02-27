@@ -62,6 +62,73 @@ const Index: FunctionalComponent<Props> = () => (
       <meta name="theme-color" content="#ff3385" />
       <link rel="manifest" href="/manifest.json" />
       <link rel="canonical" href={siteOrigin} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: escapeStyleScriptContent(
+            JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebApplication',
+              name: 'ShrinkImg',
+              url: siteOrigin,
+              description:
+                'Free online image compressor. Shrink JPG, PNG, WebP and AVIF files instantly in your browser. No upload needed — 100% private.',
+              applicationCategory: 'Multimedia',
+              operatingSystem: 'Any',
+              offers: {
+                '@type': 'Offer',
+                price: '0',
+                priceCurrency: 'USD',
+              },
+            }),
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: escapeStyleScriptContent(
+            JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: 'Is ShrinkImg free?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes, 100% free with no limits.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Are my images uploaded to a server?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'No, all compression happens in your browser.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'What formats are supported?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'JPG, PNG, WebP, AVIF, and more.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'How much can I reduce file size?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Up to 90% depending on settings and format.',
+                  },
+                },
+              ],
+            }),
+          ),
+        }}
+      />
       <style
         dangerouslySetInnerHTML={{ __html: escapeStyleScriptContent(baseCss) }}
       />

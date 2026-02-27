@@ -107,6 +107,19 @@ const toOutput: Output = {
       Cross-Origin-Embedder-Policy: require-corp
       Cross-Origin-Opener-Policy: same-origin
   `,
+  'robots.txt': dedent`
+    User-agent: *
+    Allow: /
+    Sitemap: https://shrinkimg.com/sitemap.xml
+  `,
+  'sitemap.xml': dedent`
+    <?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <url>
+        <loc>https://shrinkimg.com/</loc>
+      </url>
+    </urlset>
+  `,
 };
 
 writeFiles(toOutput);

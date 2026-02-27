@@ -248,6 +248,9 @@ export default class Intro extends Component<Props, State> {
               width="539"
               height="162"
             />
+            <span class={style.logoTagline}>
+              Free Online Image Compressor
+            </span>
           </h1>
           <div class={style.loadImg}>
             {showBlobSVG && (
@@ -423,6 +426,30 @@ export default class Intro extends Component<Props, State> {
                 </div>
               </div>
             </SlideOnScroll>
+          </div>
+        </section>
+
+        <section class={style.info}>
+          <div class={style.infoContainer}>
+            <h2 class={style.infoTitle}>FAQ</h2>
+            <div class={style.faqList}>
+              <details class={style.faqItem}>
+                <summary>Is ShrinkImg free?</summary>
+                <p>Yes, 100% free with no limits.</p>
+              </details>
+              <details class={style.faqItem}>
+                <summary>Are my images uploaded to a server?</summary>
+                <p>No, all compression happens in your browser.</p>
+              </details>
+              <details class={style.faqItem}>
+                <summary>What formats are supported?</summary>
+                <p>JPG, PNG, WebP, AVIF, and more.</p>
+              </details>
+              <details class={style.faqItem}>
+                <summary>How much can I reduce file size?</summary>
+                <p>Up to 90% depending on settings and format.</p>
+              </details>
+            </div>
           </div>
         </section>
 
