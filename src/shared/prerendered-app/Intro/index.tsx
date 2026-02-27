@@ -14,7 +14,7 @@ import smallSectionAsset from 'url:./imgs/info-content/small.svg';
 import simpleSectionAsset from 'url:./imgs/info-content/simple.svg';
 import secureSectionAsset from 'url:./imgs/info-content/secure.svg';
 import logoIcon from 'url:./imgs/demos/icon-demo-logo.png';
-import logoWithText from 'data-url-text:./imgs/logo-with-text.svg';
+import logoWithText from 'url:./imgs/logo-with-text.png';
 import * as style from './style.css';
 import type SnackBarElement from 'shared/custom-els/snack-bar';
 import 'shared/custom-els/snack-bar';
@@ -244,13 +244,9 @@ export default class Intro extends Component<Props, State> {
             <img
               class={style.logo}
               src={logoWithText}
-              alt="ShrinkImg"
-              width="539"
-              height="162"
+              alt="ShrinkImg — Free Online Image Compressor"
             />
-            <span class={style.logoTagline}>
-              Free Online Image Compressor
-            </span>
+            <span class={style.logoTagline}>Free Online Image Compressor</span>
           </h1>
           <div class={style.loadImg}>
             {showBlobSVG && (
