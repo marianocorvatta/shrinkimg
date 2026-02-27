@@ -164,6 +164,7 @@ export default class Intro extends Component<Props, State> {
               src={logoWithText}
               alt="ShrinkImg — Free Online Image Compressor"
             />
+            <span class={style.logoBrandName}>ShrinkImg</span>
             <span class={style.logoTagline}>Free Online Image Compressor</span>
           </h1>
           <div class={style.loadImg}>
