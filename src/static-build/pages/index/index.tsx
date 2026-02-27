@@ -50,7 +50,19 @@ const Index: FunctionalComponent<Props> = ({ locale, strings }) => {
         <meta property="og:image:width" content="500" />
         <meta property="og:image:height" content="500" />
         <meta property="og:image:alt" content={t('meta.ogAlt')} />
-        <meta name="og:description" content={t('meta.description')} />
+        <meta property="og:description" content={t('meta.description')} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta
+          property="og:locale"
+          content={locale === 'en' ? 'en_US' : 'es_AR'}
+        />
+        <meta
+          property="og:locale:alternate"
+          content={locale === 'en' ? 'es_AR' : 'en_US'}
+        />
+        <meta name="twitter:title" content="ShrinkImg" />
+        <meta name="twitter:description" content={t('meta.description')} />
+        <meta name="twitter:image" content={`${siteOrigin}${ogImage}`} />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"

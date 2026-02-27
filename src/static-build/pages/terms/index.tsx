@@ -4,6 +4,7 @@ import baseCss from 'css:../index/base.css';
 import legalCss from 'css:../legal-styles.css';
 import initialCss from 'initial-css:';
 import favicon from 'url:static-build/assets/favicon.ico';
+import ogImage from 'url:static-build/assets/icon-large-maskable.png';
 import { escapeStyleScriptContent, siteOrigin } from 'static-build/utils';
 import type { Locale } from 'shared/i18n';
 import { t } from 'shared/i18n';
@@ -39,6 +40,26 @@ const TermsPage: FunctionalComponent<Props> = ({ locale }) => {
       <head>
         <title>{titleMap[locale]}</title>
         <meta name="description" content={descriptionMap[locale]} />
+        <meta property="og:title" content={titleMap[locale]} />
+        <meta property="og:description" content={descriptionMap[locale]} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${siteOrigin}${ogImage}`} />
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="500" />
+        <meta property="og:image:type" content="image/png" />
+        <meta
+          property="og:locale"
+          content={locale === 'en' ? 'en_US' : 'es_AR'}
+        />
+        <meta
+          property="og:locale:alternate"
+          content={locale === 'en' ? 'es_AR' : 'en_US'}
+        />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={titleMap[locale]} />
+        <meta name="twitter:description" content={descriptionMap[locale]} />
+        <meta name="twitter:image" content={`${siteOrigin}${ogImage}`} />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"

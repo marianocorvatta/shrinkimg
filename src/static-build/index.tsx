@@ -20,6 +20,7 @@ import CompressImagesOnlinePage from './pages/guides/compress-images-online';
 import JpgVsPngVsWebpVsAvifPage from './pages/guides/jpg-vs-png-vs-webp-vs-avif';
 import CompressImagesForWebPage from './pages/guides/compress-images-for-web';
 import WhatIsWebpPage from './pages/guides/what-is-webp';
+import NotFoundPage from './pages/404';
 import { initI18n, getStrings, supportedLocales } from 'shared/i18n';
 import type { Locale } from 'shared/i18n';
 import * as iconLargeMaskable from 'img-url:static-build/assets/icon-large-maskable.png';
@@ -158,6 +159,9 @@ const toOutput: Output = {
   ),
   'es/guides/what-is-webp/index.html': renderLocalePage('es', WhatIsWebpPage),
 
+  // 404 page
+  '404.html': renderPage(<NotFoundPage />),
+
   'manifest.json': JSON.stringify({
     name: 'ShrinkImg',
     short_name: 'ShrinkImg',
@@ -218,6 +222,9 @@ const toOutput: Output = {
     Sitemap: https://shrinkimg.com/sitemap.xml
   `,
   'sitemap.xml': sitemapXml,
+  _redirects: dedent`
+    /* /404.html 404
+  `,
 };
 
 writeFiles(toOutput);
