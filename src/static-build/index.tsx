@@ -16,6 +16,8 @@ import { renderPage, writeFiles } from './utils';
 import IndexPage from './pages/index';
 import PrivacyPage from './pages/privacy';
 import TermsPage from './pages/terms';
+import { initI18n, getStrings, supportedLocales } from 'shared/i18n';
+import type { Locale } from 'shared/i18n';
 import * as iconLargeMaskable from 'img-url:static-build/assets/icon-large-maskable.png';
 import * as iconLarge from 'img-url:static-build/assets/icon-large.png';
 import * as screenshot1 from 'img-url:static-build/assets/screenshot1.png';
@@ -54,10 +56,54 @@ interface Output {
   [outputPath: string]: string;
 }
 
+function renderLocalePage(locale: Locale, Component: any, props: any = {}) {
+  const strings = getStrings(locale);
+  initI18n(locale, strings);
+  return renderPage(<Component locale={locale} strings={strings} {...props} />);
+}
+
+// Generate sitemap with hreflang alternates
+const sitemapUrls = [
+  { path: '', enPath: '/', esPath: '/es/' },
+  { path: 'privacy', enPath: '/privacy', esPath: '/es/privacy' },
+  { path: 'terms', enPath: '/terms', esPath: '/es/terms' },
+];
+
+const sitemapXml = dedent`
+  <?xml version="1.0" encoding="UTF-8"?>
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+          xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    ${sitemapUrls
+      .map(
+        ({ enPath, esPath }) => `
+    <url>
+      <loc>https://shrinkimg.com${enPath}</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://shrinkimg.com${enPath}" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://shrinkimg.com${esPath}" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://shrinkimg.com${enPath}" />
+    </url>
+    <url>
+      <loc>https://shrinkimg.com${esPath}</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://shrinkimg.com${enPath}" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://shrinkimg.com${esPath}" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://shrinkimg.com${enPath}" />
+    </url>`,
+      )
+      .join('')}
+  </urlset>
+`;
+
 const toOutput: Output = {
-  'index.html': renderPage(<IndexPage />),
-  'privacy/index.html': renderPage(<PrivacyPage />),
-  'terms/index.html': renderPage(<TermsPage />),
+  // English pages (root)
+  'index.html': renderLocalePage('en', IndexPage),
+  'privacy/index.html': renderLocalePage('en', PrivacyPage),
+  'terms/index.html': renderLocalePage('en', TermsPage),
+
+  // Spanish pages
+  'es/index.html': renderLocalePage('es', IndexPage),
+  'es/privacy/index.html': renderLocalePage('es', PrivacyPage),
+  'es/terms/index.html': renderLocalePage('es', TermsPage),
+
   'manifest.json': JSON.stringify({
     name: 'ShrinkImg',
     short_name: 'ShrinkImg',
@@ -117,20 +163,7 @@ const toOutput: Output = {
     Allow: /
     Sitemap: https://shrinkimg.com/sitemap.xml
   `,
-  'sitemap.xml': dedent`
-    <?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      <url>
-        <loc>https://shrinkimg.com/</loc>
-      </url>
-      <url>
-        <loc>https://shrinkimg.com/privacy</loc>
-      </url>
-      <url>
-        <loc>https://shrinkimg.com/terms</loc>
-      </url>
-    </urlset>
-  `,
+  'sitemap.xml': sitemapXml,
 };
 
 writeFiles(toOutput);

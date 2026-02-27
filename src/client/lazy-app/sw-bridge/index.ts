@@ -1,6 +1,7 @@
 import type SnackBarElement from 'shared/custom-els/snack-bar';
 
 import { get, set } from 'idb-keyval';
+import { t } from 'shared/i18n';
 
 import swUrl from 'service-worker:sw';
 
@@ -68,7 +69,7 @@ export async function offliner(showSnack: SnackBarElement['showSnackbar']) {
   navigator.serviceWorker.addEventListener('controllerchange', async () => {
     // Is it the first install?
     if (!hasController) {
-      showSnack('Ready to work offline', { timeout: 5000 });
+      showSnack(t('snack.offline'), { timeout: 5000 });
       return;
     }
 
@@ -87,7 +88,7 @@ export async function offliner(showSnack: SnackBarElement['showSnackbar']) {
   await updateReady(reg);
 
   // Ask the user if they want to update.
-  const result = await showSnack('Update available', {
+  const result = await showSnack(t('snack.updateAvailable'), {
     actions: ['reload', 'dismiss'],
   });
 

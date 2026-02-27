@@ -20,31 +20,33 @@ import type SnackBarElement from 'shared/custom-els/snack-bar';
 import 'shared/custom-els/snack-bar';
 import { startBlobs } from './blob-anim/meta';
 import SlideOnScroll from './SlideOnScroll';
+import { t, getLocale } from 'shared/i18n';
+import type { TranslationKey } from 'shared/i18n';
 
 const demos = [
   {
-    description: 'Large photo',
+    descriptionKey: 'intro.demoLargePhoto' as TranslationKey,
     size: '2.8MB',
     filename: 'photo.jpg',
     url: largePhoto,
     iconUrl: largePhotoIcon,
   },
   {
-    description: 'Artwork',
+    descriptionKey: 'intro.demoArtwork' as TranslationKey,
     size: '2.9MB',
     filename: 'art.jpg',
     url: artwork,
     iconUrl: artworkIcon,
   },
   {
-    description: 'Device screen',
+    descriptionKey: 'intro.demoDeviceScreen' as TranslationKey,
     size: '1.6MB',
     filename: 'pixel3.png',
     url: deviceScreen,
     iconUrl: deviceScreenIcon,
   },
   {
-    description: 'SVG icon',
+    descriptionKey: 'intro.demoSvgIcon' as TranslationKey,
     size: '13KB',
     filename: 'icon.svg',
     url: logo,
@@ -118,7 +120,7 @@ export default class Intro extends Component<Props, State> {
       this.props.onFile!(file);
     } catch (err) {
       this.setState({ fetchingDemoIndex: undefined });
-      this.props.showSnack!("Couldn't fetch demo image");
+      this.props.showSnack!(t('snack.fetchDemoError'));
     }
   };
 
@@ -128,14 +130,14 @@ export default class Intro extends Component<Props, State> {
     try {
       clipboardItems = await navigator.clipboard.read();
     } catch (err) {
-      this.props.showSnack!(`No permission to access clipboard`);
+      this.props.showSnack!(t('snack.clipboardNoPermission'));
       return;
     }
 
     const blob = await getImageClipboardItem(clipboardItems);
 
     if (!blob) {
-      this.props.showSnack!(`No image found in the clipboard`);
+      this.props.showSnack!(t('snack.clipboardNoImage'));
       return;
     }
 
@@ -143,6 +145,9 @@ export default class Intro extends Component<Props, State> {
   };
 
   render({}: Props, { fetchingDemoIndex, showBlobSVG }: State) {
+    const locale = getLocale();
+    const prefix = locale === 'en' ? '' : `/${locale}`;
+
     return (
       <div class={style.intro}>
         <input
@@ -158,14 +163,29 @@ export default class Intro extends Component<Props, State> {
               class={style.blobCanvas}
             />
           )}
+          <div class={style.langSwitcher}>
+            <a
+              class={`${style.langLink} ${
+                locale === 'en' ? style.langActive : ''
+              }`}
+              href="/"
+            >
+              {t('lang.en')}
+            </a>
+            <span class={style.langSep}>|</span>
+            <a
+              class={`${style.langLink} ${
+                locale === 'es' ? style.langActive : ''
+              }`}
+              href="/es/"
+            >
+              {t('lang.es')}
+            </a>
+          </div>
           <h1 class={style.logoContainer}>
-            <img
-              class={style.logo}
-              src={logoImg}
-              alt="ShrinkImg — Free Online Image Compressor"
-            />
-            <span class={style.logoBrandName}>ShrinkImg</span>
-            <span class={style.logoTagline}>Free Online Image Compressor</span>
+            <img class={style.logo} src={logoImg} alt={t('intro.logoAlt')} />
+            <span class={style.logoBrandName}>{t('intro.brand')}</span>
+            <span class={style.logoTagline}>{t('intro.tagline')}</span>
           </h1>
           <div class={style.loadImg}>
             {showBlobSVG && (
@@ -203,13 +223,14 @@ export default class Intro extends Component<Props, State> {
                 </svg>
               </button>
               <div>
-                <span class={style.dropText}>Drop </span>OR{' '}
+                <span class={style.dropText}>{t('intro.drop')}</span>
+                {t('intro.or')}{' '}
                 {supportsClipboardAPI ? (
                   <button class={style.pasteBtn} onClick={this.onPasteClick}>
-                    Paste
+                    {t('intro.paste')}
                   </button>
                 ) : (
-                  'Paste'
+                  t('intro.paste')
                 )}
               </div>
             </div>
@@ -227,9 +248,10 @@ export default class Intro extends Component<Props, State> {
             />
           </svg>
           <div class={style.contentPadding}>
-            <p class={style.demoTitle}>
-              Or <strong>try one</strong> of these:
-            </p>
+            <p
+              class={style.demoTitle}
+              dangerouslySetInnerHTML={{ __html: t('intro.demoTitle') }}
+            />
             <ul class={style.demos}>
               {demos.map((demo, i) => (
                 <li>
@@ -242,7 +264,7 @@ export default class Intro extends Component<Props, State> {
                         <img
                           class={style.demoIcon}
                           src={demo.iconUrl}
-                          alt={demo.description}
+                          alt={t(demo.descriptionKey)}
                         />
                         {fetchingDemoIndex === i && (
                           <div class={style.demoLoader}>
@@ -272,9 +294,9 @@ export default class Intro extends Component<Props, State> {
         <div
           class={`${style.adSlot} ${style.adSlotHorizontal}`}
           id="ad-slot-top"
-          aria-label="Advertisement"
+          aria-label={t('ad.label')}
         >
-          <span class={style.adLabel}>Advertisement</span>
+          <span class={style.adLabel}>{t('ad.label')}</span>
         </div>
 
         <section class={style.info}>
@@ -282,17 +304,14 @@ export default class Intro extends Component<Props, State> {
             <SlideOnScroll>
               <div class={style.infoContent}>
                 <div class={style.infoTextWrapper}>
-                  <h2 class={style.infoTitle}>Small</h2>
-                  <p class={style.infoCaption}>
-                    Smaller images mean faster load times. ShrinkImg can reduce
-                    file size and maintain high quality.
-                  </p>
+                  <h2 class={style.infoTitle}>{t('info.smallTitle')}</h2>
+                  <p class={style.infoCaption}>{t('info.smallCaption')}</p>
                 </div>
                 <div class={style.infoImgWrapper}>
                   <img
                     class={style.infoImg}
                     src={smallSectionAsset}
-                    alt="silhouette of a large 1.4 megabyte image shrunk into a smaller 80 kilobyte image"
+                    alt={t('info.smallAlt')}
                     width="536"
                     height="522"
                   />
@@ -307,18 +326,14 @@ export default class Intro extends Component<Props, State> {
             <SlideOnScroll>
               <div class={style.infoContent}>
                 <div class={style.infoTextWrapper}>
-                  <h2 class={style.infoTitle}>Simple</h2>
-                  <p class={style.infoCaption}>
-                    Open your image, inspect the differences, then save
-                    instantly. Feeling adventurous? Adjust the settings for even
-                    smaller files.
-                  </p>
+                  <h2 class={style.infoTitle}>{t('info.simpleTitle')}</h2>
+                  <p class={style.infoCaption}>{t('info.simpleCaption')}</p>
                 </div>
                 <div class={style.infoImgWrapper}>
                   <img
                     class={style.infoImg}
                     src={simpleSectionAsset}
-                    alt="grid of multiple shrunk images displaying various options"
+                    alt={t('info.simpleAlt')}
                     width="538"
                     height="384"
                   />
@@ -333,17 +348,14 @@ export default class Intro extends Component<Props, State> {
             <SlideOnScroll>
               <div class={style.infoContent}>
                 <div class={style.infoTextWrapper}>
-                  <h2 class={style.infoTitle}>Secure</h2>
-                  <p class={style.infoCaption}>
-                    Worried about privacy? Images never leave your device since
-                    ShrinkImg does all the work locally.
-                  </p>
+                  <h2 class={style.infoTitle}>{t('info.secureTitle')}</h2>
+                  <p class={style.infoCaption}>{t('info.secureCaption')}</p>
                 </div>
                 <div class={style.infoImgWrapper}>
                   <img
                     class={style.infoImg}
                     src={secureSectionAsset}
-                    alt="silhouette of a cloud with a 'no' symbol on top"
+                    alt={t('info.secureAlt')}
                     width="498"
                     height="333"
                   />
@@ -357,30 +369,30 @@ export default class Intro extends Component<Props, State> {
         <div
           class={`${style.adSlot} ${style.adSlotRectangle}`}
           id="ad-slot-mid"
-          aria-label="Advertisement"
+          aria-label={t('ad.label')}
         >
-          <span class={style.adLabel}>Advertisement</span>
+          <span class={style.adLabel}>{t('ad.label')}</span>
         </div>
 
         <section class={style.info}>
           <div class={style.infoContainer}>
-            <h2 class={style.infoTitle}>FAQ</h2>
+            <h2 class={style.infoTitle}>{t('faq.heading')}</h2>
             <div class={style.faqList}>
               <details class={style.faqItem}>
-                <summary>Is ShrinkImg free?</summary>
-                <p>Yes, 100% free with no limits.</p>
+                <summary>{t('faq.q1')}</summary>
+                <p>{t('faq.a1')}</p>
               </details>
               <details class={style.faqItem}>
-                <summary>Are my images uploaded to a server?</summary>
-                <p>No, all compression happens in your browser.</p>
+                <summary>{t('faq.q2')}</summary>
+                <p>{t('faq.a2')}</p>
               </details>
               <details class={style.faqItem}>
-                <summary>What formats are supported?</summary>
-                <p>JPG, PNG, WebP, AVIF, and more.</p>
+                <summary>{t('faq.q3')}</summary>
+                <p>{t('faq.a3')}</p>
               </details>
               <details class={style.faqItem}>
-                <summary>How much can I reduce file size?</summary>
-                <p>Up to 90% depending on settings and format.</p>
+                <summary>{t('faq.q4')}</summary>
+                <p>{t('faq.a4')}</p>
               </details>
             </div>
           </div>
@@ -390,9 +402,9 @@ export default class Intro extends Component<Props, State> {
         <div
           class={`${style.adSlot} ${style.adSlotHorizontal}`}
           id="ad-slot-bottom"
-          aria-label="Advertisement"
+          aria-label={t('ad.label')}
         >
-          <span class={style.adLabel}>Advertisement</span>
+          <span class={style.adLabel}>{t('ad.label')}</span>
         </div>
 
         <footer class={style.footer}>
@@ -405,18 +417,18 @@ export default class Intro extends Component<Props, State> {
             </svg>
             <div class={style.footerPadding}>
               <footer class={style.footerItems}>
-                <a class={style.footerLink} href="/privacy">
-                  Privacy
+                <a class={style.footerLink} href={`${prefix}/privacy`}>
+                  {t('footer.privacy')}
                 </a>
-                <a class={style.footerLink} href="/terms">
-                  Terms
+                <a class={style.footerLink} href={`${prefix}/terms`}>
+                  {t('footer.terms')}
                 </a>
                 <a
                   class={style.footerLinkWithLogo}
                   href="https://github.com/marianocorvatta/shrinkimg"
                 >
                   <img src={githubLogo} alt="" width="10" height="10" />
-                  Source on Github
+                  {t('footer.github')}
                 </a>
               </footer>
             </div>

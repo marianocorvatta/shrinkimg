@@ -11,6 +11,7 @@ import 'file-drop-element';
 import 'shared/custom-els/snack-bar';
 import Intro from 'shared/prerendered-app/Intro';
 import 'shared/custom-els/loading-spinner';
+import { t, getLocale } from 'shared/i18n';
 
 const ROUTE_EDITOR = '/editor';
 
@@ -50,7 +51,7 @@ export default class App extends Component<Props, State> {
         this.setState({ Compress: module.default });
       })
       .catch(() => {
-        this.showSnack('Failed to load app');
+        this.showSnack(t('snack.failedToLoadApp'));
       });
 
     swBridgePromise.then(async ({ offliner, getSharedImage }) => {
@@ -58,7 +59,8 @@ export default class App extends Component<Props, State> {
       if (!this.state.awaitingShareTarget) return;
       const file = await getSharedImage();
       // Remove the ?share-target from the URL
-      history.replaceState('', '', '/');
+      const prefix = this.getLocalePrefix();
+      history.replaceState('', '', prefix || '/');
       this.openEditor();
       this.setState({ file, awaitingShareTarget: false });
     });
@@ -94,15 +96,24 @@ export default class App extends Component<Props, State> {
     return this.snackbar.showSnackbar(message, options);
   };
 
+  private getLocalePrefix(): string {
+    const locale = getLocale();
+    return locale === 'en' ? '' : `/${locale}`;
+  }
+
   private onPopState = () => {
-    this.setState({ isEditorOpen: location.pathname === ROUTE_EDITOR });
+    const prefix = this.getLocalePrefix();
+    this.setState({
+      isEditorOpen: location.pathname === `${prefix}${ROUTE_EDITOR}`,
+    });
   };
 
   private openEditor = () => {
     if (this.state.isEditorOpen) return;
     // Change path, but preserve query string.
     const editorURL = new URL(location.href);
-    editorURL.pathname = ROUTE_EDITOR;
+    const prefix = this.getLocalePrefix();
+    editorURL.pathname = `${prefix}${ROUTE_EDITOR}`;
     history.pushState(null, '', editorURL.href);
     this.setState({ isEditorOpen: true });
   };

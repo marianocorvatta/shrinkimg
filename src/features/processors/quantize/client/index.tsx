@@ -9,6 +9,7 @@ import {
 import Expander from 'client/lazy-app/Compress/Options/Expander';
 import Select from 'client/lazy-app/Compress/Options/Select';
 import Range from 'client/lazy-app/Compress/Options/Range';
+import { t } from 'shared/i18n';
 
 const konamiPromise = konami();
 
@@ -53,14 +54,14 @@ export class Options extends Component<Props, State> {
         <Expander>
           {extendedSettings ? (
             <label class={style.optionTextFirst}>
-              Type:
+              {t('quantize.type')}
               <Select
                 name="zx"
                 value={'' + options.zx}
                 onChange={this.onChange}
               >
-                <option value="0">Standard</option>
-                <option value="1">ZX</option>
+                <option value="0">{t('quantize.standard')}</option>
+                <option value="1">{t('quantize.zx')}</option>
               </Select>
             </label>
           ) : null}
@@ -75,7 +76,7 @@ export class Options extends Component<Props, State> {
                 value={options.maxNumColors}
                 onInput={this.onChange}
               >
-                Colors:
+                {t('quantize.colors')}
               </Range>
             </div>
           )}
@@ -89,7 +90,7 @@ export class Options extends Component<Props, State> {
             value={options.dither}
             onInput={this.onChange}
           >
-            Dithering:
+            {t('quantize.dithering')}
           </Range>
         </div>
       </form>

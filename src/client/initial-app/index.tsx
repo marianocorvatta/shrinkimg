@@ -12,11 +12,20 @@
  */
 import { h, render } from 'preact';
 import App from './App';
+import { initI18n } from 'shared/i18n';
+import type { Locale, TranslationStrings } from 'shared/i18n';
 
 const root = document.getElementById('app') as HTMLElement;
 
 async function main() {
   if (!__PRODUCTION__) await import('preact/debug');
+
+  const locale = ((window as any).__SHRINKIMG_LOCALE__ || 'en') as Locale;
+  const strings = (window as any).__SHRINKIMG_STRINGS__ as
+    | TranslationStrings
+    | undefined;
+  initI18n(locale, strings);
+
   render(<App />, root);
 }
 

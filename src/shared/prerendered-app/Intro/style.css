@@ -33,6 +33,39 @@
   }
 }
 
+.lang-switcher {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.lang-link {
+  color: var(--dim-text);
+  text-decoration: none;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  transition: color 200ms ease;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.lang-active {
+  color: var(--color-primary);
+}
+
+.lang-sep {
+  color: var(--dim-text);
+  opacity: 0.4;
+}
+
 .logo-container {
   margin: 5rem 0 1rem;
   display: flex;
