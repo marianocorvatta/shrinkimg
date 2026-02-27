@@ -7,7 +7,7 @@ import favicon from 'url:static-build/assets/favicon.ico';
 import { escapeStyleScriptContent, siteOrigin } from 'static-build/utils';
 
 const PrivacyPage: FunctionalComponent = () => (
-  <html lang="en">
+  <html lang="en" class="legal">
     <head>
       <title>Privacy Policy — ShrinkImg</title>
       <meta

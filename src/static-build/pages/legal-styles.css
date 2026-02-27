@@ -1,3 +1,10 @@
+html.legal,
+html.legal body {
+  overflow: auto;
+  contain: none;
+  height: auto;
+}
+
 .legal-page {
   max-width: 800px;
   margin: 0 auto;
