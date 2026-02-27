@@ -62,6 +62,7 @@ const Index: FunctionalComponent<Props> = () => (
       <meta name="theme-color" content="#ff3385" />
       <link rel="manifest" href="/manifest.json" />
       <link rel="canonical" href={siteOrigin} />
+      {/* PASTE GOOGLE ADSENSE SCRIPT HERE */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -165,6 +166,27 @@ const Index: FunctionalComponent<Props> = () => (
           </snack-bar>
         </noscript>
       </div>
+      <div id="cookie-consent" class="cookie-consent" style="display:none">
+        <p>
+          We use cookies for analytics and advertising. By continuing to use
+          this site, you agree to our use of cookies.
+        </p>
+        <button id="cookie-accept" class="cookie-accept-btn">Accept</button>
+      </div>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: escapeStyleScriptContent(
+            `(function(){` +
+              `var b=document.getElementById('cookie-consent');` +
+              `if(!localStorage.getItem('shrinkimg-cookie-consent')){b.style.display='flex';}` +
+              `document.getElementById('cookie-accept').addEventListener('click',function(){` +
+              `localStorage.setItem('shrinkimg-cookie-consent','accepted');` +
+              `b.style.display='none';` +
+              `});` +
+              `})();`,
+          ),
+        }}
+      />
       <script
         dangerouslySetInnerHTML={{
           __html: escapeStyleScriptContent(allSrc),

@@ -353,6 +353,15 @@ export default class Intro extends Component<Props, State> {
           </svg>
         </div>
 
+        {/* Ad Slot 1 — horizontal banner between demos and feature sections */}
+        <div
+          class={`${style.adSlot} ${style.adSlotHorizontal}`}
+          id="ad-slot-top"
+          aria-label="Advertisement"
+        >
+          <span class={style.adLabel}>Advertisement</span>
+        </div>
+
         <section class={style.info}>
           <div class={style.infoContainer}>
             <SlideOnScroll>
@@ -429,6 +438,15 @@ export default class Intro extends Component<Props, State> {
           </div>
         </section>
 
+        {/* Ad Slot 2 — rectangle between "Secure" section and FAQ */}
+        <div
+          class={`${style.adSlot} ${style.adSlotRectangle}`}
+          id="ad-slot-mid"
+          aria-label="Advertisement"
+        >
+          <span class={style.adLabel}>Advertisement</span>
+        </div>
+
         <section class={style.info}>
           <div class={style.infoContainer}>
             <h2 class={style.infoTitle}>FAQ</h2>
@@ -452,6 +470,15 @@ export default class Intro extends Component<Props, State> {
             </div>
           </div>
         </section>
+
+        {/* Ad Slot 3 — horizontal banner between FAQ and footer */}
+        <div
+          class={`${style.adSlot} ${style.adSlotHorizontal}`}
+          id="ad-slot-bottom"
+          aria-label="Advertisement"
+        >
+          <span class={style.adLabel}>Advertisement</span>
+        </div>
 
         <footer class={style.footer}>
           <div class={style.footerContainer}>
