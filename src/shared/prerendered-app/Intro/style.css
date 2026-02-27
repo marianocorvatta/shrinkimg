@@ -300,19 +300,6 @@
   }
 }
 
-.install-btn {
-  composes: unbutton from global;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: var(--color-primary);
-  border-radius: 0.4em;
-  color: var(--color-surface);
-  padding: 0.5em 1em;
-  font-size: 1.6rem;
-  animation: fade-in 600ms ease-in-out;
-}
-
 .demo-title {
   color: var(--white);
   margin: 0;

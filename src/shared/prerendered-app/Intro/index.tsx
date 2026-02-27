@@ -56,7 +56,6 @@ const blobAnimImport =
   !__PRERENDER__ && matchMedia('(prefers-reduced-motion: reduce)').matches
     ? undefined
     : import('./blob-anim');
-const installButtonSource = 'introInstallButton-Purple';
 const supportsClipboardAPI =
   !__PRERENDER__ && navigator.clipboard && navigator.clipboard.read;
 
@@ -75,7 +74,6 @@ interface Props {
 }
 interface State {
   fetchingDemoIndex?: number;
-  beforeInstallEvent?: BeforeInstallPromptEvent;
   showBlobSVG: boolean;
 }
 
@@ -85,18 +83,8 @@ export default class Intro extends Component<Props, State> {
   };
   private fileInput?: HTMLInputElement;
   private blobCanvas?: HTMLCanvasElement;
-  private installingViaButton = false;
 
   componentDidMount() {
-    // Listen for beforeinstallprompt events, indicating ShrinkImg is installable.
-    window.addEventListener(
-      'beforeinstallprompt',
-      this.onBeforeInstallPromptEvent,
-    );
-
-    // Listen for the appinstalled event, indicating ShrinkImg has been installed.
-    window.addEventListener('appinstalled', this.onAppInstalled);
-
     if (blobAnimImport) {
       blobAnimImport.then((module) => {
         this.setState(
@@ -107,14 +95,6 @@ export default class Intro extends Component<Props, State> {
         );
       });
     }
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener(
-      'beforeinstallprompt',
-      this.onBeforeInstallPromptEvent,
-    );
-    window.removeEventListener('appinstalled', this.onAppInstalled);
   }
 
   private onFileChange = (event: Event): void => {
@@ -142,65 +122,6 @@ export default class Intro extends Component<Props, State> {
     }
   };
 
-  private onBeforeInstallPromptEvent = (event: BeforeInstallPromptEvent) => {
-    // Don't show the mini-infobar on mobile
-    event.preventDefault();
-
-    // Save the beforeinstallprompt event so it can be called later.
-    this.setState({ beforeInstallEvent: event });
-
-    // Log the event.
-    const gaEventInfo = {
-      eventCategory: 'pwa-install',
-      eventAction: 'promo-shown',
-      nonInteraction: true,
-    };
-    ga('send', 'event', gaEventInfo);
-  };
-
-  private onInstallClick = async (event: Event) => {
-    // Get the deferred beforeinstallprompt event
-    const beforeInstallEvent = this.state.beforeInstallEvent;
-    // If there's no deferred prompt, bail.
-    if (!beforeInstallEvent) return;
-
-    this.installingViaButton = true;
-
-    // Show the browser install prompt
-    beforeInstallEvent.prompt();
-
-    // Wait for the user to accept or dismiss the install prompt
-    const { outcome } = await beforeInstallEvent.userChoice;
-    // Send the analytics data
-    const gaEventInfo = {
-      eventCategory: 'pwa-install',
-      eventAction: 'promo-clicked',
-      eventLabel: installButtonSource,
-      eventValue: outcome === 'accepted' ? 1 : 0,
-    };
-    ga('send', 'event', gaEventInfo);
-
-    // If the prompt was dismissed, we aren't going to install via the button.
-    if (outcome === 'dismissed') {
-      this.installingViaButton = false;
-    }
-  };
-
-  private onAppInstalled = () => {
-    // We don't need the install button, if it's shown
-    this.setState({ beforeInstallEvent: undefined });
-
-    // Don't log analytics if page is not visible
-    if (document.hidden) return;
-
-    // Try to get the install, if it's not set, use 'browser'
-    const source = this.installingViaButton ? installButtonSource : 'browser';
-    ga('send', 'event', 'pwa-install', 'installed', source);
-
-    // Clear the install method property
-    this.installingViaButton = false;
-  };
-
   private onPasteClick = async () => {
     let clipboardItems: ClipboardItem[];
 
@@ -221,10 +142,7 @@ export default class Intro extends Component<Props, State> {
     this.props.onFile!(new File([blob], 'image.unknown'));
   };
 
-  render(
-    {}: Props,
-    { fetchingDemoIndex, beforeInstallEvent, showBlobSVG }: State,
-  ) {
+  render({}: Props, { fetchingDemoIndex, showBlobSVG }: State) {
     return (
       <div class={style.intro}>
         <input
@@ -503,11 +421,6 @@ export default class Intro extends Component<Props, State> {
             </div>
           </div>
         </footer>
-        {beforeInstallEvent && (
-          <button class={style.installBtn} onClick={this.onInstallClick}>
-            Install
-          </button>
-        )}
       </div>
     );
   }
