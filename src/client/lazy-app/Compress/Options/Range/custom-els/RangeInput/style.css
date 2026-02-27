@@ -24,7 +24,7 @@ range-input::before {
   height: 2px;
   border-radius: 1px;
   background: linear-gradient(var(--main-theme-color), var(--main-theme-color))
-    0 / var(--value-percent, 0%) 100% no-repeat var(--medium-light-gray);
+    0 / var(--value-percent, 0%) 100% no-repeat var(--color-border);
 }
 
 .input {

@@ -59,7 +59,13 @@ const Index: FunctionalComponent<Props> = () => (
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <link rel="shortcut icon" href={favicon} />
       <link rel="apple-touch-icon" href={ogImage} />
-      <meta name="theme-color" content="#ff3385" />
+      <meta name="theme-color" content="#2EC4B6" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
       <link rel="manifest" href="/manifest.json" />
       <link rel="canonical" href={siteOrigin} />
       {/* PASTE GOOGLE ADSENSE SCRIPT HERE */}
@@ -171,7 +177,9 @@ const Index: FunctionalComponent<Props> = () => (
           We use cookies for analytics and advertising. By continuing to use
           this site, you agree to our use of cookies.
         </p>
-        <button id="cookie-accept" class="cookie-accept-btn">Accept</button>
+        <button id="cookie-accept" class="cookie-accept-btn">
+          Accept
+        </button>
       </div>
       <script
         dangerouslySetInnerHTML={{

@@ -1,31 +1,65 @@
 html {
-  --pink: #ff3385;
-  --hot-pink: #ff0066;
-  --white: #fff;
+  /* Primary — Teal */
+  --color-primary: #2ec4b6;
+  --color-primary-hover: #25a89c;
+  --color-primary-light: #e0f5f2;
+
+  /* Secondary — Coral */
+  --color-secondary: #e76f51;
+  --color-secondary-hover: #d45b3e;
+
+  /* Backgrounds & Surfaces */
+  --color-bg: #fafcfd;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f4f8f9;
+
+  /* Typography */
+  --color-heading: #1b2838;
+  --color-text: #4a5568;
+  --color-text-muted: #94a3b8;
+
+  /* Borders */
+  --color-border: #e2e8f0;
+
+  /* Status */
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+
+  /* Legacy aliases — mapped to new palette */
+  --pink: var(--color-primary);
+  --hot-pink: var(--color-primary-hover);
+  --white: var(--color-surface);
   --black: #000;
-  --off-black: #1d1d1d;
-  --blue: #5fb4e4;
-  --dim-blue: #0a7bcc;
-  --deep-blue: #09f;
-  --light-blue: #76c8ff;
-  --less-light-gray: #bcbcbc;
-  --medium-light-gray: #d1d1d1;
-  --light-gray: #eaeaea;
+  --off-black: var(--color-heading);
+  --blue: var(--color-secondary);
+  --dim-blue: var(--color-primary-hover);
+  --deep-blue: var(--color-secondary-hover);
+  --light-blue: var(--color-primary-light);
+  --less-light-gray: var(--color-text-muted);
+  --medium-light-gray: var(--color-border);
+  --light-gray: var(--color-border);
   --dark-gray: #333;
-  --dim-text: #343a3e;
-  --dark-text: #142630;
+  --dim-text: var(--color-text);
+  --dark-text: var(--color-heading);
 
   /* Old stuff: */
-  --button-fg: rgb(95, 180, 228);
+  --button-fg: var(--color-primary);
 }
 
-@media (dynamic-range: high) {
-  @supports (color: oklch(0% 0 0)) {
-    html {
-      --pink: oklch(75% 0.3 3);
-      --hot-pink: oklch(65% 0.3 3);
-      --blue: oklch(75% 0.3 248);
-      --deep-blue: oklch(65% 0.3 248);
-    }
+@media (prefers-color-scheme: dark) {
+  html {
+    --color-primary: #3dd8c8;
+    --color-primary-hover: #2ec4b6;
+    --color-primary-light: #1a3a35;
+    --color-secondary: #f0926e;
+    --color-secondary-hover: #e76f51;
+    --color-bg: #0f1419;
+    --color-surface: #1a2332;
+    --color-surface-alt: #1e2d3d;
+    --color-heading: #f0f6fc;
+    --color-text: #c9d1d9;
+    --color-text-muted: #8b949e;
+    --color-border: #30363d;
   }
 }

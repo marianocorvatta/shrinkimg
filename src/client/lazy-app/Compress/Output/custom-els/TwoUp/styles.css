@@ -56,11 +56,11 @@ two-up[legacy-clip-compat] > :not(.two-up-handle) {
 }
 
 .arrow-left {
-  fill: var(--pink);
+  fill: var(--color-primary);
 }
 
 .arrow-right {
-  fill: var(--blue);
+  fill: var(--color-secondary);
 }
 
 two-up[orientation='vertical'] .two-up-handle {

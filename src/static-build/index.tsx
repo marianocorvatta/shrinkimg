@@ -60,8 +60,8 @@ const toOutput: Output = {
     start_url: '/?utm_medium=PWA&utm_source=launcher',
     display: 'standalone',
     orientation: 'any',
-    background_color: '#fff',
-    theme_color: '#ff3385',
+    background_color: '#FAFCFD',
+    theme_color: '#2EC4B6',
     icons: [
       {
         src: iconLarge.default,

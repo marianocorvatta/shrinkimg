@@ -41,9 +41,9 @@
 }
 
 .options-1-theme {
-  --main-theme-color: var(--pink);
-  --hot-theme-color: var(--hot-pink);
-  --header-text-color: var(--white);
+  --main-theme-color: var(--color-primary);
+  --hot-theme-color: var(--color-primary-hover);
+  --header-text-color: var(--color-surface);
   --scroller-radius: var(--options-radius) var(--options-radius) 0 0;
   --rotate-copyoverbutton-angle: 90deg; /* To point down */
 
@@ -54,9 +54,9 @@
 }
 
 .options-2-theme {
-  --main-theme-color: var(--blue);
-  --hot-theme-color: var(--deep-blue);
-  --header-text-color: var(--dark-text);
+  --main-theme-color: var(--color-secondary);
+  --hot-theme-color: var(--color-secondary-hover);
+  --header-text-color: var(--color-surface);
   --scroller-radius: var(--options-radius) var(--options-radius) 0 0;
   --rotate-copyoverbutton-angle: -90deg; /* To point up */
 
@@ -117,7 +117,7 @@
   }
 
   &:focus .back-blob {
-    stroke: var(--deep-blue);
+    stroke: var(--color-primary);
     stroke-width: 5px;
     animation: strokePulse 500ms ease forwards;
   }
@@ -141,7 +141,7 @@
 }
 
 .back-blob {
-  fill: var(--hot-pink);
+  fill: var(--color-primary);
   opacity: 0.77;
 }
 
