@@ -27,7 +27,7 @@ interface Props {}
 const Index: FunctionalComponent<Props> = () => (
   <html lang="en">
     <head>
-      <title>ShrinkImg</title>
+      <title>ShrinkImg — Free Online Image Compressor</title>
       <meta
         name="description"
         content="Free online image compressor. Shrink JPG, PNG, WebP and AVIF files instantly in your browser. No upload needed — 100% private."
