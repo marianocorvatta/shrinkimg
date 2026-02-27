@@ -43,8 +43,8 @@
 
 .logo-tagline {
   font-size: 1rem;
-  font-weight: 400;
-  color: var(--color-text-muted);
+  font-weight: 500;
+  color: var(--color-heading);
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
