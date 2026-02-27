@@ -424,6 +424,12 @@ export default class Intro extends Component<Props, State> {
                   {t('footer.terms')}
                 </a>
                 <a
+                  class={style.footerLink}
+                  href={`${prefix}/guides/compress-images-online`}
+                >
+                  {t('footer.guides')}
+                </a>
+                <a
                   class={style.footerLinkWithLogo}
                   href="https://github.com/marianocorvatta/shrinkimg"
                 >

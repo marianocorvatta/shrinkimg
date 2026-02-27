@@ -42,6 +42,7 @@ const en = {
 
   'footer.privacy': 'Privacy',
   'footer.terms': 'Terms',
+  'footer.guides': 'Guides',
   'footer.github': 'Source on Github',
 
   'cookie.message':

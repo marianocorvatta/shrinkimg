@@ -16,6 +16,10 @@ import { renderPage, writeFiles } from './utils';
 import IndexPage from './pages/index';
 import PrivacyPage from './pages/privacy';
 import TermsPage from './pages/terms';
+import CompressImagesOnlinePage from './pages/guides/compress-images-online';
+import JpgVsPngVsWebpVsAvifPage from './pages/guides/jpg-vs-png-vs-webp-vs-avif';
+import CompressImagesForWebPage from './pages/guides/compress-images-for-web';
+import WhatIsWebpPage from './pages/guides/what-is-webp';
 import { initI18n, getStrings, supportedLocales } from 'shared/i18n';
 import type { Locale } from 'shared/i18n';
 import * as iconLargeMaskable from 'img-url:static-build/assets/icon-large-maskable.png';
@@ -67,6 +71,26 @@ const sitemapUrls = [
   { path: '', enPath: '/', esPath: '/es/' },
   { path: 'privacy', enPath: '/privacy', esPath: '/es/privacy' },
   { path: 'terms', enPath: '/terms', esPath: '/es/terms' },
+  {
+    path: 'guides/compress-images-online',
+    enPath: '/guides/compress-images-online',
+    esPath: '/es/guides/compress-images-online',
+  },
+  {
+    path: 'guides/jpg-vs-png-vs-webp-vs-avif',
+    enPath: '/guides/jpg-vs-png-vs-webp-vs-avif',
+    esPath: '/es/guides/jpg-vs-png-vs-webp-vs-avif',
+  },
+  {
+    path: 'guides/compress-images-for-web',
+    enPath: '/guides/compress-images-for-web',
+    esPath: '/es/guides/compress-images-for-web',
+  },
+  {
+    path: 'guides/what-is-webp',
+    enPath: '/guides/what-is-webp',
+    esPath: '/es/guides/what-is-webp',
+  },
 ];
 
 const sitemapXml = dedent`
@@ -103,6 +127,36 @@ const toOutput: Output = {
   'es/index.html': renderLocalePage('es', IndexPage),
   'es/privacy/index.html': renderLocalePage('es', PrivacyPage),
   'es/terms/index.html': renderLocalePage('es', TermsPage),
+
+  // Guide pages (English)
+  'guides/compress-images-online/index.html': renderLocalePage(
+    'en',
+    CompressImagesOnlinePage,
+  ),
+  'guides/jpg-vs-png-vs-webp-vs-avif/index.html': renderLocalePage(
+    'en',
+    JpgVsPngVsWebpVsAvifPage,
+  ),
+  'guides/compress-images-for-web/index.html': renderLocalePage(
+    'en',
+    CompressImagesForWebPage,
+  ),
+  'guides/what-is-webp/index.html': renderLocalePage('en', WhatIsWebpPage),
+
+  // Guide pages (Spanish)
+  'es/guides/compress-images-online/index.html': renderLocalePage(
+    'es',
+    CompressImagesOnlinePage,
+  ),
+  'es/guides/jpg-vs-png-vs-webp-vs-avif/index.html': renderLocalePage(
+    'es',
+    JpgVsPngVsWebpVsAvifPage,
+  ),
+  'es/guides/compress-images-for-web/index.html': renderLocalePage(
+    'es',
+    CompressImagesForWebPage,
+  ),
+  'es/guides/what-is-webp/index.html': renderLocalePage('es', WhatIsWebpPage),
 
   'manifest.json': JSON.stringify({
     name: 'ShrinkImg',

@@ -45,6 +45,7 @@ const es: TranslationStrings = {
 
   'footer.privacy': 'Privacidad',
   'footer.terms': 'T\u00e9rminos',
+  'footer.guides': 'Gu\u00edas',
   'footer.github': 'C\u00f3digo en Github',
 
   'cookie.message':
