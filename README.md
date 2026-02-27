@@ -2,41 +2,41 @@
 
 [ShrinkImg] is a free online image compressor. Shrink JPG, PNG, WebP and AVIF files instantly in your browser. No upload needed — 100% private.
 
-# Privacy
+## Fork of Squoosh
 
-ShrinkImg does not send your image to a server. All image compression processes locally.
+ShrinkImg is a fork of [Squoosh](https://github.com/GoogleChromeLabs/squoosh) by Google Chrome Labs, licensed under the [Apache License 2.0](./LICENSE).
 
-However, ShrinkImg utilizes Google Analytics to collect the following:
+The original Squoosh copyright is retained in all modified source files. A summary of changes made to the original work is documented in the [NOTICE](./NOTICE) file, as required by the Apache License 2.0 (Section 4).
+
+## Privacy
+
+ShrinkImg does not send your image to a server. All image compression happens locally in your browser.
+
+However, ShrinkImg uses Google Analytics to collect the following:
 
 - [Basic visitor data](https://support.google.com/analytics/answer/6004245?ref_topic=2919631).
 - The before and after image size value.
-- If ShrinkImg PWA, the type of ShrinkImg installation.
-- If ShrinkImg PWA, the installation time and date.
 
-# Developing
+## Developing
 
 To develop for ShrinkImg:
 
 1. Clone the repository
-1. To install node packages, run:
+1. Install node packages:
    ```sh
    npm install
    ```
-1. Then build the app by running:
+1. Build the app:
    ```sh
    npm run build
    ```
-1. After building, start the development server by running:
+1. Start the development server:
    ```sh
    npm run dev
    ```
 
-# Contributing
+## Contributing
 
-ShrinkImg is an open-source project that appreciates all community involvement. To contribute to the project, follow the [contribute guide](/CONTRIBUTING.md).
+ShrinkImg is open source and appreciates community involvement. To contribute, follow the [contribute guide](/CONTRIBUTING.md).
 
-# Attribution
-
-ShrinkImg is based on [Squoosh](https://squoosh.app) by Google Chrome Labs, licensed under the Apache License 2.0.
-
-[ShrinkImg]: https://shrinkimg.com
+[shrinkimg]: https://shrinkimg.com

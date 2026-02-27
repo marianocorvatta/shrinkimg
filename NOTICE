@@ -1,1 +1,58 @@
-ShrinkImg is based on Squoosh by Google Chrome Labs (https://github.com/GoogleChromeLabs/squoosh), licensed under the Apache License 2.0.
+ShrinkImg
+Copyright 2026 Mariano Corvatta
+
+This product is based on Squoosh
+Copyright 2018 Google LLC
+https://github.com/GoogleChromeLabs/squoosh
+Licensed under the Apache License, Version 2.0.
+
+---
+
+MODIFICATIONS MADE TO THE ORIGINAL WORK
+
+The following files and areas have been modified from the original Squoosh
+source code to create ShrinkImg:
+
+  src/shared/prerendered-app/Intro/
+    - Rewritten intro page: new branding, layout, copy, FAQ section,
+      ad slots, footer, and demo section.
+
+  src/shared/prerendered-app/colors.css
+    - Complete rewrite: replaced Squoosh pink/blue palette with a new
+      teal/coral palette; added dark mode variables.
+
+  src/static-build/pages/index/base.css
+    - Updated font stack (Inter), background pattern, cookie consent styles.
+
+  src/static-build/pages/index/index.tsx
+    - Updated metadata: title, description, theme-color, OG tags, manifest,
+      structured data (FAQ), Google Fonts link, cookie consent banner.
+
+  src/static-build/index.tsx
+    - Updated PWA manifest: name, theme_color, background_color,
+      description, screenshots, categories.
+
+  src/client/lazy-app/Compress/style.css
+    - Updated theme colors for both option panels (teal/coral).
+
+  src/client/lazy-app/Compress/Output/custom-els/TwoUp/styles.css
+    - Updated arrow colors to match new palette.
+
+  src/shared/custom-els/loading-spinner/styles.css
+    - Updated default spinner color to use new primary color variable.
+
+  src/shared/custom-els/snack-bar/styles.css
+    - Updated action button color to use success color variable.
+
+  src/shared/prerendered-app/Intro/imgs/
+    - All logo/brand assets replaced with new ShrinkImg origami-bird logo.
+
+  src/static-build/assets/
+    - All icons, favicon, and PWA assets replaced with new ShrinkImg branding.
+
+  Removed features:
+    - PWA install prompt button and associated logic.
+
+---
+
+A copy of the Apache License 2.0 is included in the LICENSE file.
