@@ -5,7 +5,7 @@ import legalCss from 'css:../../legal-styles.css';
 import guideCss from 'css:../guide-styles.css';
 import initialCss from 'initial-css:';
 import favicon from 'url:static-build/assets/favicon.ico';
-import ogImage from 'url:static-build/assets/logo-w.png';
+import ogImage from 'url:static-build/assets/logo-fondo-blanco.png';
 import { escapeStyleScriptContent, siteOrigin } from 'static-build/utils';
 import type { Locale } from 'shared/i18n';
 import { t } from 'shared/i18n';
