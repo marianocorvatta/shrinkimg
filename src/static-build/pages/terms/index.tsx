@@ -4,7 +4,7 @@ import baseCss from 'css:../index/base.css';
 import legalCss from 'css:../legal-styles.css';
 import initialCss from 'initial-css:';
 import favicon from 'url:static-build/assets/favicon.ico';
-import ogImage from 'url:static-build/assets/icon-large-maskable.png';
+import ogImage from 'url:static-build/assets/logo-w.png';
 import { escapeStyleScriptContent, siteOrigin } from 'static-build/utils';
 import type { Locale } from 'shared/i18n';
 import { t } from 'shared/i18n';
@@ -45,8 +45,8 @@ const TermsPage: FunctionalComponent<Props> = ({ locale }) => {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${siteOrigin}${ogImage}`} />
-        <meta property="og:image:width" content="500" />
-        <meta property="og:image:height" content="500" />
+        <meta property="og:image:width" content="1015" />
+        <meta property="og:image:height" content="1015" />
         <meta property="og:image:type" content="image/png" />
         <meta
           property="og:locale"

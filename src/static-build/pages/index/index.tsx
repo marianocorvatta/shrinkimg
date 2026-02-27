@@ -16,7 +16,7 @@ import baseCss from 'css:./base.css';
 import initialCss from 'initial-css:';
 import { allSrc } from 'client-bundle:client/initial-app';
 import favicon from 'url:static-build/assets/favicon.ico';
-import ogImage from 'url:static-build/assets/icon-large-maskable.png';
+import ogImage from 'url:static-build/assets/logo-w.png';
 import { escapeStyleScriptContent, siteOrigin } from 'static-build/utils';
 import Intro from 'shared/prerendered-app/Intro';
 import snackbarCss from 'css:../../../shared/custom-els/snack-bar/styles.css';
@@ -47,8 +47,8 @@ const Index: FunctionalComponent<Props> = ({ locale, strings }) => {
           content={`${siteOrigin}${ogImage}`}
         />
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="500" />
-        <meta property="og:image:height" content="500" />
+        <meta property="og:image:width" content="1015" />
+        <meta property="og:image:height" content="1015" />
         <meta property="og:image:alt" content={t('meta.ogAlt')} />
         <meta property="og:description" content={t('meta.description')} />
         <meta property="og:url" content={canonicalUrl} />
