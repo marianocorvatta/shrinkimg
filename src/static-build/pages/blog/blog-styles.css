@@ -40,6 +40,30 @@
   text-decoration: underline;
 }
 
+:global(.blog-key-takeaways) {
+  background: var(--color-primary-light, #e0f5f2);
+  border-left: 4px solid var(--color-primary, #2ec4b6);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+}
+
+:global(.blog-key-takeaways) h2 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+  color: var(--color-primary-hover, #25a89c);
+}
+
+:global(.blog-key-takeaways) ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+:global(.blog-key-takeaways) li {
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+}
+
 :global(.blog-cta) {
   display: inline-block;
   margin: 1.5rem 0;
