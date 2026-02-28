@@ -29,7 +29,7 @@ import { blogPosts } from './pages/blog/posts';
 import { initI18n, getStrings, supportedLocales } from 'shared/i18n';
 import type { Locale } from 'shared/i18n';
 import * as iconLargeMaskable from 'img-url:static-build/assets/logo-fondo-blanco.png';
-import * as iconLarge from 'img-url:static-build/assets/logo.png';
+import * as iconLarge from 'img-url:static-build/assets/icon-large.png';
 import * as screenshot1 from 'img-url:static-build/assets/screenshot1.png';
 import * as screenshot2 from 'img-url:static-build/assets/screenshot2.jpg';
 import * as screenshot3 from 'img-url:static-build/assets/screenshot3.jpg';
