@@ -11,6 +11,8 @@
  * limitations under the License.
  */
 import { h } from 'preact';
+import { copyFileSync } from 'fs';
+import { join as joinPath, resolve as resolvePath } from 'path';
 
 import { renderPage, writeFiles } from './utils';
 import IndexPage from './pages/index';
@@ -253,3 +255,8 @@ for (const post of blogPosts) {
 }
 
 writeFiles(toOutput);
+
+// Copy favicon.ico to the root of the build output so Google can find it at /favicon.ico
+const faviconSrc = resolvePath('src/static-build/assets/favicon.ico');
+const faviconDest = joinPath('.tmp', 'build', 'static', 'favicon.ico');
+copyFileSync(faviconSrc, faviconDest);

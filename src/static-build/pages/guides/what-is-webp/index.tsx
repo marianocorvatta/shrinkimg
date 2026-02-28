@@ -4,7 +4,6 @@ import baseCss from 'css:../../index/base.css';
 import legalCss from 'css:../../legal-styles.css';
 import guideCss from 'css:../guide-styles.css';
 import initialCss from 'initial-css:';
-import favicon from 'url:static-build/assets/favicon.ico';
 import ogImage from 'url:static-build/assets/logo-fondo-blanco.png';
 import { escapeStyleScriptContent, siteOrigin } from 'static-build/utils';
 import type { Locale } from 'shared/i18n';
@@ -69,7 +68,12 @@ const WhatIsWebpPage: FunctionalComponent<Props> = ({ locale }) => {
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
         />
         <meta name="theme-color" content="#2EC4B6" />
-        <link rel="shortcut icon" href={favicon} />
+        <link
+          rel="icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+          sizes="48x48"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
