@@ -74,7 +74,7 @@ function renderLocalePage(locale: Locale, Component: any, props: any = {}) {
 
 // Generate sitemap with hreflang alternates
 const sitemapUrls = [
-  { path: '', enPath: '/', esPath: '/es/' },
+  { path: '', enPath: '/', esPath: '/es' },
   { path: 'privacy', enPath: '/privacy', esPath: '/es/privacy' },
   { path: 'terms', enPath: '/terms', esPath: '/es/terms' },
   {

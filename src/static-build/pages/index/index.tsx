@@ -89,7 +89,7 @@ const Index: FunctionalComponent<Props> = ({ locale, strings }) => {
         <link rel="manifest" href="/manifest.json" />
         <link rel="canonical" href={canonicalUrl} />
         <link rel="alternate" hrefLang="en" href={siteOrigin} />
-        <link rel="alternate" hrefLang="es" href={`${siteOrigin}/es/`} />
+        <link rel="alternate" hrefLang="es" href={`${siteOrigin}/es`} />
         <link rel="alternate" hrefLang="x-default" href={siteOrigin} />
         <script
           async
