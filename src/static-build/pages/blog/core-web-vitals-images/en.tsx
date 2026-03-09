@@ -106,7 +106,7 @@ const CoreWebVitalsImagesEn: FunctionalComponent = () => (
         <strong>Compress aggressively.</strong> Use WebP or AVIF at quality
         75–85. The LCP image is typically displayed large, which makes very high
         quality settings unnecessary. Our{' '}
-        <a href="/blog/jpg-vs-png-vs-webp-vs-avif">format comparison guide</a>{' '}
+        <a href="/blog/jpg-vs-png-vs-webp-vs-avif/">format comparison guide</a>{' '}
         shows the size savings in detail.
       </li>
       <li>
@@ -327,7 +327,7 @@ const CoreWebVitalsImagesEn: FunctionalComponent = () => (
       Start with your LCP image, compress it in <a href="/">ShrinkImg</a>, and
       run PageSpeed Insights before and after. The improvement will be immediate
       and measurable. For more context, read our guide on{' '}
-      <a href="/blog/why-image-compression-matters">
+      <a href="/blog/why-image-compression-matters/">
         why image compression matters for web performance
       </a>
       .

@@ -227,8 +227,8 @@ const OnlineImageCompressionPrivacyEn: FunctionalComponent = () => (
       the page loads. The WASM modules are cached in your browser; the
       compression itself requires no network access. For bulk workflows
       involving sensitive images — see our{' '}
-      <a href="/blog/compress-images-bulk">guide to bulk image compression</a> —
-      this means you can process an entire library of confidential images
+      <a href="/blog/compress-images-bulk/">guide to bulk image compression</a>{' '}
+      — this means you can process an entire library of confidential images
       without any of them leaving your device.
     </p>
 

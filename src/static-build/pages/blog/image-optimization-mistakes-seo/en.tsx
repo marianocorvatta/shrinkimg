@@ -83,7 +83,7 @@ const ImageOptimizationMistakesSeoEn: FunctionalComponent = () => (
       <strong>Fix:</strong> Convert all new images to WebP before uploading. For
       existing JPEG libraries, prioritize converting high-traffic pages first.
       ShrinkImg converts any image to WebP directly in your browser. See our{' '}
-      <a href="/blog/webp-guide-2026">complete WebP guide</a> for more detail.
+      <a href="/blog/webp-guide-2026/">complete WebP guide</a> for more detail.
     </p>
 
     <h2 id="mistake-3">3. Missing or Generic Alt Text</h2>
@@ -307,9 +307,11 @@ const ImageOptimizationMistakesSeoEn: FunctionalComponent = () => (
 
     <p>
       For a comprehensive approach to image performance that covers{' '}
-      <a href="/blog/core-web-vitals-images">Core Web Vitals</a> in detail, or a
-      complete optimization workflow for{' '}
-      <a href="/blog/image-optimization-ecommerce">e-commerce product images</a>
+      <a href="/blog/core-web-vitals-images/">Core Web Vitals</a> in detail, or
+      a complete optimization workflow for{' '}
+      <a href="/blog/image-optimization-ecommerce/">
+        e-commerce product images
+      </a>
       , see those dedicated guides. Start with compression — fixing mistake #1
       alone often produces 30–60% reduction in total page weight and a
       measurable improvement in search performance.

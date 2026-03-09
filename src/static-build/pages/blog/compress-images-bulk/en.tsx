@@ -60,7 +60,7 @@ const CompressImagesBulkEn: FunctionalComponent = () => (
       equal number of product photos — often in multiple sizes (main image,
       thumbnail, zoom). This is exactly the scenario where a systematic bulk
       approach pays off. See our{' '}
-      <a href="/blog/image-optimization-ecommerce">
+      <a href="/blog/image-optimization-ecommerce/">
         e-commerce image optimization guide
       </a>{' '}
       for size recommendations per image type.
@@ -79,7 +79,7 @@ const CompressImagesBulkEn: FunctionalComponent = () => (
       Established blogs and news sites accumulate years of unoptimized images.
       Running a bulk pass on legacy content images reduces page weight on older
       posts and can improve{' '}
-      <a href="/blog/core-web-vitals-images">Core Web Vitals</a> scores
+      <a href="/blog/core-web-vitals-images/">Core Web Vitals</a> scores
       site-wide when those pages are crawled and the CrUX data updates.
     </p>
 
@@ -101,7 +101,7 @@ const CompressImagesBulkEn: FunctionalComponent = () => (
       personal documents converted to images. For a full explanation of why
       browser-based compression is safer than server-side tools, see our guide
       on{' '}
-      <a href="/blog/online-image-compression-privacy">
+      <a href="/blog/online-image-compression-privacy/">
         image compression privacy and security
       </a>
       .
@@ -280,7 +280,7 @@ const CompressImagesBulkEn: FunctionalComponent = () => (
       </li>
       <li>
         Run a test page through{' '}
-        <a href="/blog/core-web-vitals-images">PageSpeed Insights</a> after
+        <a href="/blog/core-web-vitals-images/">PageSpeed Insights</a> after
         uploading the first batch to verify the expected performance
         improvement.
       </li>
@@ -290,7 +290,7 @@ const CompressImagesBulkEn: FunctionalComponent = () => (
       Bulk image compression is a high-leverage operation — a few hours of
       systematic processing can dramatically improve your site's performance,
       reduce hosting costs, and fix{' '}
-      <a href="/blog/why-image-compression-matters">
+      <a href="/blog/why-image-compression-matters/">
         the number one cause of slow web pages
       </a>{' '}
       across your entire content library at once. Start with your heaviest pages

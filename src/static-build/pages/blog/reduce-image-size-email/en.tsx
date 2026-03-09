@@ -306,11 +306,11 @@ const ReduceImageSizeEmailEn: FunctionalComponent = () => (
 
     <p>
       If you want to go deeper on format choices for other contexts, see our{' '}
-      <a href="/blog/jpg-vs-png-vs-webp-vs-avif">
+      <a href="/blog/jpg-vs-png-vs-webp-vs-avif/">
         complete guide to image formats
       </a>{' '}
       or learn{' '}
-      <a href="/blog/why-image-compression-matters">
+      <a href="/blog/why-image-compression-matters/">
         why image compression matters for web performance
       </a>
       .

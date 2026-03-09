@@ -137,7 +137,7 @@ const WhyImageCompressionMattersEs: FunctionalComponent = () => (
 
     <p>
       Los formatos modernos como{' '}
-      <a href="/es/blog/jpg-vs-png-vs-webp-vs-avif">WebP y AVIF</a> ofrecen
+      <a href="/es/blog/jpg-vs-png-vs-webp-vs-avif/">WebP y AVIF</a> ofrecen
       ratios de compresión significativamente mejores que los tradicionales JPG
       y PNG. AVIF en particular puede producir archivos un 50% más pequeños que
       JPG con la misma calidad visual — un cambio radical para el rendimiento
@@ -215,7 +215,7 @@ const WhyImageCompressionMattersEs: FunctionalComponent = () => (
         <strong>Elegí el formato correcto</strong> — usá WebP para el mejor
         equilibrio entre calidad y tamaño, AVIF para máxima compresión, y PNG
         solo cuando necesites transparencia lossless. Revisá nuestra{' '}
-        <a href="/es/blog/jpg-vs-png-vs-webp-vs-avif">
+        <a href="/es/blog/jpg-vs-png-vs-webp-vs-avif/">
           guía comparativa de formatos
         </a>{' '}
         para recomendaciones detalladas.
@@ -267,7 +267,7 @@ const WhyImageCompressionMattersEs: FunctionalComponent = () => (
 
     <p>
       Si tenés un{' '}
-      <a href="/es/blog/optimize-images-wordpress">sitio en WordPress</a>, la
+      <a href="/es/blog/optimize-images-wordpress/">sitio en WordPress</a>, la
       optimización de imágenes es aún más crítica ya que los temas y page
       builders tienden a agregar múltiples tamaños de imagen por cada carga.
     </p>

@@ -88,7 +88,7 @@ const ImageOptimizationMistakesSeoEs: FunctionalComponent = () => (
       de subir. Para bibliotecas JPEG existentes, priorizá convertir primero las
       páginas de mayor tráfico. ShrinkImg convierte cualquier imagen a WebP
       directamente en tu navegador. Mirá nuestra{' '}
-      <a href="/es/blog/webp-guide-2026">guía completa de WebP</a> para más
+      <a href="/es/blog/webp-guide-2026/">guía completa de WebP</a> para más
       detalles.
     </p>
 
@@ -339,9 +339,9 @@ const ImageOptimizationMistakesSeoEs: FunctionalComponent = () => (
 
     <p>
       Para un enfoque integral de rendimiento de imágenes que cubre{' '}
-      <a href="/es/blog/core-web-vitals-images">Core Web Vitals</a> en detalle,
+      <a href="/es/blog/core-web-vitals-images/">Core Web Vitals</a> en detalle,
       o un flujo de trabajo de optimización completo para{' '}
-      <a href="/es/blog/image-optimization-ecommerce">
+      <a href="/es/blog/image-optimization-ecommerce/">
         imágenes de producto de e-commerce
       </a>
       , mirá esas guías dedicadas. Empezá con la compresión — corregir el error

@@ -61,7 +61,7 @@ const CompressImagesBulkEs: FunctionalComponent = () => (
       igual número de fotos de producto — a menudo en múltiples tamaños (imagen
       principal, miniatura, zoom). Este es exactamente el escenario donde un
       enfoque masivo sistemático vale la pena. Mirá nuestra{' '}
-      <a href="/es/blog/image-optimization-ecommerce">
+      <a href="/es/blog/image-optimization-ecommerce/">
         guía de optimización de imágenes para e-commerce
       </a>{' '}
       para recomendaciones de tamaño por tipo de imagen.
@@ -81,7 +81,7 @@ const CompressImagesBulkEs: FunctionalComponent = () => (
       Los blogs y sitios de noticias establecidos acumulan años de imágenes sin
       optimizar. Hacer un pase masivo sobre las imágenes de contenido antiguo
       reduce el peso de las páginas más viejas y puede mejorar los puntajes de{' '}
-      <a href="/es/blog/core-web-vitals-images">Core Web Vitals</a> en todo el
+      <a href="/es/blog/core-web-vitals-images/">Core Web Vitals</a> en todo el
       sitio cuando esas páginas se rastrean y los datos de CrUX se actualizan.
     </p>
 
@@ -105,7 +105,7 @@ const CompressImagesBulkEs: FunctionalComponent = () => (
       imágenes. Para una explicación completa de por qué la compresión basada en
       navegador es más segura que las herramientas del lado del servidor, mirá
       nuestra guía sobre{' '}
-      <a href="/es/blog/online-image-compression-privacy">
+      <a href="/es/blog/online-image-compression-privacy/">
         privacidad y seguridad en la compresión de imágenes
       </a>
       .
@@ -295,8 +295,8 @@ const CompressImagesBulkEs: FunctionalComponent = () => (
       </li>
       <li>
         Pasá una página de prueba por{' '}
-        <a href="/es/blog/core-web-vitals-images">PageSpeed Insights</a> después
-        de subir el primer lote para verificar la mejora de rendimiento
+        <a href="/es/blog/core-web-vitals-images/">PageSpeed Insights</a>{' '}
+        después de subir el primer lote para verificar la mejora de rendimiento
         esperada.
       </li>
     </ul>
@@ -305,7 +305,7 @@ const CompressImagesBulkEs: FunctionalComponent = () => (
       La compresión masiva de imágenes es una operación de alto impacto — unas
       horas de procesamiento sistemático pueden mejorar dramáticamente el
       rendimiento de tu sitio, reducir los costos de hosting y corregir{' '}
-      <a href="/es/blog/why-image-compression-matters">
+      <a href="/es/blog/why-image-compression-matters/">
         la causa número uno de las páginas web lentas
       </a>{' '}
       en toda tu biblioteca de contenido a la vez. Empezá con tus páginas más

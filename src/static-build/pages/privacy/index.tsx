@@ -32,7 +32,7 @@ const titleMap: Record<Locale, string> = {
 const PrivacyPage: FunctionalComponent<Props> = ({ locale }) => {
   const Content = contentMap[locale];
   const prefix = locale === 'en' ? '' : `/${locale}`;
-  const canonicalUrl = `${siteOrigin}${prefix}/privacy`;
+  const canonicalUrl = `${siteOrigin}${prefix}/privacy/`;
 
   return (
     <html lang={locale} class="legal">
@@ -81,12 +81,16 @@ const PrivacyPage: FunctionalComponent<Props> = ({ locale }) => {
           rel="stylesheet"
         />
         <link rel="canonical" href={canonicalUrl} />
-        <link rel="alternate" hrefLang="en" href={`${siteOrigin}/privacy`} />
-        <link rel="alternate" hrefLang="es" href={`${siteOrigin}/es/privacy`} />
+        <link rel="alternate" hrefLang="en" href={`${siteOrigin}/privacy/`} />
+        <link
+          rel="alternate"
+          hrefLang="es"
+          href={`${siteOrigin}/es/privacy/`}
+        />
         <link
           rel="alternate"
           hrefLang="x-default"
-          href={`${siteOrigin}/privacy`}
+          href={`${siteOrigin}/privacy/`}
         />
         <script
           async

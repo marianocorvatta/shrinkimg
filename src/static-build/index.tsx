@@ -74,34 +74,34 @@ function renderLocalePage(locale: Locale, Component: any, props: any = {}) {
 
 // Generate sitemap with hreflang alternates
 const sitemapUrls = [
-  { path: '', enPath: '/', esPath: '/es' },
-  { path: 'privacy', enPath: '/privacy', esPath: '/es/privacy' },
-  { path: 'terms', enPath: '/terms', esPath: '/es/terms' },
+  { path: '', enPath: '/', esPath: '/es/' },
+  { path: 'privacy', enPath: '/privacy/', esPath: '/es/privacy/' },
+  { path: 'terms', enPath: '/terms/', esPath: '/es/terms/' },
   {
     path: 'guides/compress-images-online',
-    enPath: '/guides/compress-images-online',
-    esPath: '/es/guides/compress-images-online',
+    enPath: '/guides/compress-images-online/',
+    esPath: '/es/guides/compress-images-online/',
   },
   {
     path: 'guides/jpg-vs-png-vs-webp-vs-avif',
-    enPath: '/guides/jpg-vs-png-vs-webp-vs-avif',
-    esPath: '/es/guides/jpg-vs-png-vs-webp-vs-avif',
+    enPath: '/guides/jpg-vs-png-vs-webp-vs-avif/',
+    esPath: '/es/guides/jpg-vs-png-vs-webp-vs-avif/',
   },
   {
     path: 'guides/compress-images-for-web',
-    enPath: '/guides/compress-images-for-web',
-    esPath: '/es/guides/compress-images-for-web',
+    enPath: '/guides/compress-images-for-web/',
+    esPath: '/es/guides/compress-images-for-web/',
   },
   {
     path: 'guides/what-is-webp',
-    enPath: '/guides/what-is-webp',
-    esPath: '/es/guides/what-is-webp',
+    enPath: '/guides/what-is-webp/',
+    esPath: '/es/guides/what-is-webp/',
   },
-  { path: 'blog', enPath: '/blog', esPath: '/es/blog' },
+  { path: 'blog', enPath: '/blog/', esPath: '/es/blog/' },
   ...blogPosts.map((post) => ({
     path: `blog/${post.slug}`,
-    enPath: `/blog/${post.slug}`,
-    esPath: `/es/blog/${post.slug}`,
+    enPath: `/blog/${post.slug}/`,
+    esPath: `/es/blog/${post.slug}/`,
   })),
 ];
 

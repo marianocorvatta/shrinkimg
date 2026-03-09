@@ -66,7 +66,7 @@ const OptimizeImagesWordpressEs: FunctionalComponent = () => (
 
     <p>
       El resultado es predecible:{' '}
-      <a href="/es/blog/why-image-compression-matters">
+      <a href="/es/blog/why-image-compression-matters/">
         las páginas cargan lento
       </a>
       , los puntajes de Core Web Vitals sufren, los visitantes rebotan y el
@@ -130,7 +130,7 @@ const OptimizeImagesWordpressEs: FunctionalComponent = () => (
 
     <p>
       ¿No estás seguro de qué formato es mejor para tus imágenes? Nuestra{' '}
-      <a href="/es/blog/jpg-vs-png-vs-webp-vs-avif">
+      <a href="/es/blog/jpg-vs-png-vs-webp-vs-avif/">
         guía completa de comparación de formatos
       </a>{' '}
       desglosa las fortalezas y compromisos de cada opción.

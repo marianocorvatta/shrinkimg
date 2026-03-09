@@ -59,7 +59,7 @@ const TermsContentEn: FunctionalComponent = () => (
       The Service displays advertisements provided by third-party ad networks,
       including Google AdSense. These third parties may use cookies and similar
       technologies. Their use is governed by their own privacy policies and
-      terms. See our <a href="/privacy">Privacy Policy</a> for more details.
+      terms. See our <a href="/privacy/">Privacy Policy</a> for more details.
     </p>
 
     <h2>Modifications and Discontinuation</h2>

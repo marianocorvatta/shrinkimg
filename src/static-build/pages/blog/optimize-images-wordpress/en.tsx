@@ -66,7 +66,7 @@ const OptimizeImagesWordpressEn: FunctionalComponent = () => (
 
     <p>
       The result is predictable:{' '}
-      <a href="/blog/why-image-compression-matters">pages load slowly</a>, Core
+      <a href="/blog/why-image-compression-matters/">pages load slowly</a>, Core
       Web Vitals scores suffer, visitors bounce, and search rankings decline.
       The good news is that this problem is entirely preventable.
     </p>
@@ -127,7 +127,7 @@ const OptimizeImagesWordpressEn: FunctionalComponent = () => (
 
     <p>
       Not sure which format is best for your images? Our{' '}
-      <a href="/blog/jpg-vs-png-vs-webp-vs-avif">
+      <a href="/blog/jpg-vs-png-vs-webp-vs-avif/">
         complete format comparison guide
       </a>{' '}
       breaks down the strengths and trade-offs of each option.

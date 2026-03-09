@@ -258,7 +258,7 @@ const OnlineImageCompressionPrivacyEs: FunctionalComponent = () => (
       de cargar la página. Los módulos WASM se cachean en tu navegador; la
       compresión en sí no requiere acceso a la red. Para flujos de trabajo
       masivos con imágenes sensibles — mirá nuestra{' '}
-      <a href="/es/blog/compress-images-bulk">
+      <a href="/es/blog/compress-images-bulk/">
         guía de compresión masiva de imágenes
       </a>{' '}
       — esto significa que podés procesar toda una biblioteca de imágenes

@@ -170,7 +170,7 @@ const ImageOptimizationEcommerceEn: FunctionalComponent = () => (
       WooCommerce behaves like WordPress — it generates multiple size variants
       from your upload. Compress and resize your images before uploading, as
       described in our{' '}
-      <a href="/blog/optimize-images-wordpress">
+      <a href="/blog/optimize-images-wordpress/">
         WordPress image optimization guide
       </a>
       . WebP uploads are supported since WooCommerce 8.x with the right theme.
@@ -284,11 +284,11 @@ const ImageOptimizationEcommerceEn: FunctionalComponent = () => (
 
     <p>
       For a deeper understanding of{' '}
-      <a href="/blog/why-image-compression-matters">
+      <a href="/blog/why-image-compression-matters/">
         why image compression matters for web performance
       </a>{' '}
       or to learn about the differences between{' '}
-      <a href="/blog/jpg-vs-png-vs-webp-vs-avif">JPG, PNG, WebP, and AVIF</a>,
+      <a href="/blog/jpg-vs-png-vs-webp-vs-avif/">JPG, PNG, WebP, and AVIF</a>,
       check out those guides next.
     </p>
   </Fragment>

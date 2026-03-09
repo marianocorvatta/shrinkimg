@@ -30,7 +30,8 @@ interface Props {
 
 const Index: FunctionalComponent<Props> = ({ locale, strings }) => {
   const prefix = locale === 'en' ? '' : `/${locale}`;
-  const canonicalUrl = locale === 'en' ? siteOrigin : `${siteOrigin}/${locale}`;
+  const canonicalUrl =
+    locale === 'en' ? `${siteOrigin}/` : `${siteOrigin}/${locale}/`;
 
   return (
     <html lang={locale}>
@@ -88,9 +89,9 @@ const Index: FunctionalComponent<Props> = ({ locale, strings }) => {
         />
         <link rel="manifest" href="/manifest.json" />
         <link rel="canonical" href={canonicalUrl} />
-        <link rel="alternate" hrefLang="en" href={siteOrigin} />
-        <link rel="alternate" hrefLang="es" href={`${siteOrigin}/es`} />
-        <link rel="alternate" hrefLang="x-default" href={siteOrigin} />
+        <link rel="alternate" hrefLang="en" href={`${siteOrigin}/`} />
+        <link rel="alternate" hrefLang="es" href={`${siteOrigin}/es/`} />
+        <link rel="alternate" hrefLang="x-default" href={`${siteOrigin}/`} />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5131765795912837"

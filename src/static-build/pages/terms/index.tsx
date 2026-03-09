@@ -32,7 +32,7 @@ const titleMap: Record<Locale, string> = {
 const TermsPage: FunctionalComponent<Props> = ({ locale }) => {
   const Content = contentMap[locale];
   const prefix = locale === 'en' ? '' : `/${locale}`;
-  const canonicalUrl = `${siteOrigin}${prefix}/terms`;
+  const canonicalUrl = `${siteOrigin}${prefix}/terms/`;
 
   return (
     <html lang={locale} class="legal">
@@ -81,12 +81,12 @@ const TermsPage: FunctionalComponent<Props> = ({ locale }) => {
           rel="stylesheet"
         />
         <link rel="canonical" href={canonicalUrl} />
-        <link rel="alternate" hrefLang="en" href={`${siteOrigin}/terms`} />
-        <link rel="alternate" hrefLang="es" href={`${siteOrigin}/es/terms`} />
+        <link rel="alternate" hrefLang="en" href={`${siteOrigin}/terms/`} />
+        <link rel="alternate" hrefLang="es" href={`${siteOrigin}/es/terms/`} />
         <link
           rel="alternate"
           hrefLang="x-default"
-          href={`${siteOrigin}/terms`}
+          href={`${siteOrigin}/terms/`}
         />
         <script
           async

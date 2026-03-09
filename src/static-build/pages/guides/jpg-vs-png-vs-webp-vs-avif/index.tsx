@@ -35,7 +35,7 @@ const slug = 'guides/jpg-vs-png-vs-webp-vs-avif';
 const JpgVsPngVsWebpVsAvifPage: FunctionalComponent<Props> = ({ locale }) => {
   const Content = contentMap[locale];
   const prefix = locale === 'en' ? '' : `/${locale}`;
-  const canonicalUrl = `${siteOrigin}${prefix}/${slug}`;
+  const canonicalUrl = `${siteOrigin}${prefix}/${slug}/`;
 
   return (
     <html lang={locale} class="legal">
@@ -85,12 +85,16 @@ const JpgVsPngVsWebpVsAvifPage: FunctionalComponent<Props> = ({ locale }) => {
           rel="stylesheet"
         />
         <link rel="canonical" href={canonicalUrl} />
-        <link rel="alternate" hrefLang="en" href={`${siteOrigin}/${slug}`} />
-        <link rel="alternate" hrefLang="es" href={`${siteOrigin}/es/${slug}`} />
+        <link rel="alternate" hrefLang="en" href={`${siteOrigin}/${slug}/`} />
+        <link
+          rel="alternate"
+          hrefLang="es"
+          href={`${siteOrigin}/es/${slug}/`}
+        />
         <link
           rel="alternate"
           hrefLang="x-default"
-          href={`${siteOrigin}/${slug}`}
+          href={`${siteOrigin}/${slug}/`}
         />
         <script
           async

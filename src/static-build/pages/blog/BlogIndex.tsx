@@ -17,7 +17,7 @@ interface Props {
 
 const BlogIndex: FunctionalComponent<Props> = ({ locale }) => {
   const prefix = locale === 'en' ? '' : `/${locale}`;
-  const canonicalUrl = `${siteOrigin}${prefix}/blog`;
+  const canonicalUrl = `${siteOrigin}${prefix}/blog/`;
   const title = t('blog.title');
   const description = t('blog.description');
 
@@ -73,12 +73,12 @@ const BlogIndex: FunctionalComponent<Props> = ({ locale }) => {
           rel="stylesheet"
         />
         <link rel="canonical" href={canonicalUrl} />
-        <link rel="alternate" hrefLang="en" href={`${siteOrigin}/blog`} />
-        <link rel="alternate" hrefLang="es" href={`${siteOrigin}/es/blog`} />
+        <link rel="alternate" hrefLang="en" href={`${siteOrigin}/blog/`} />
+        <link rel="alternate" hrefLang="es" href={`${siteOrigin}/es/blog/`} />
         <link
           rel="alternate"
           hrefLang="x-default"
-          href={`${siteOrigin}/blog`}
+          href={`${siteOrigin}/blog/`}
         />
         <script
           async
@@ -122,7 +122,7 @@ const BlogIndex: FunctionalComponent<Props> = ({ locale }) => {
             sortedPosts.map((post) => (
               <article class="blog-post-card">
                 <h2>
-                  <a href={`${prefix}/blog/${post.slug}`}>
+                  <a href={`${prefix}/blog/${post.slug}/`}>
                     {post.titleMap[locale]
                       .replace(' — ShrinkImg Blog', '')
                       .replace(' — Blog de ShrinkImg', '')}
@@ -130,7 +130,7 @@ const BlogIndex: FunctionalComponent<Props> = ({ locale }) => {
                 </h2>
                 <div class="blog-meta">{post.datePublished}</div>
                 <p>{post.descriptionMap[locale].slice(0, 160)}</p>
-                <a class="blog-read-more" href={`${prefix}/blog/${post.slug}`}>
+                <a class="blog-read-more" href={`${prefix}/blog/${post.slug}/`}>
                   {t('blog.readMore')}
                 </a>
               </article>

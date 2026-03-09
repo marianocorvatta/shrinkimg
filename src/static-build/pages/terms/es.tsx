@@ -62,7 +62,7 @@ const TermsContentEs: FunctionalComponent = () => (
       terceros, incluyendo Google AdSense. Estos terceros pueden usar cookies y
       tecnologías similares. Su uso se rige por sus propias políticas de
       privacidad y términos. Consultá nuestra{' '}
-      <a href="/es/privacy">Política de Privacidad</a> para más detalles.
+      <a href="/es/privacy/">Política de Privacidad</a> para más detalles.
     </p>
 
     <h2>Modificaciones y Discontinuación</h2>

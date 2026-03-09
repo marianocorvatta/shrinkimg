@@ -357,7 +357,7 @@ const JpgVsPngVsWebpVsAvifEn: FunctionalComponent = () => (
       side in your browser, so you can see exactly how much space each one saves
       with your specific images — all without uploading a single file.
       Understanding{' '}
-      <a href="/blog/why-image-compression-matters">
+      <a href="/blog/why-image-compression-matters/">
         why image compression matters
       </a>{' '}
       is the first step toward building faster, more efficient websites.

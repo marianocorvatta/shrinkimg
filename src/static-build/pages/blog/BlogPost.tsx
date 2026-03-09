@@ -20,7 +20,7 @@ interface Props {
 const BlogPost: FunctionalComponent<Props> = ({ locale, post }) => {
   const Content = post.contentMap[locale];
   const prefix = locale === 'en' ? '' : `/${locale}`;
-  const canonicalUrl = `${siteOrigin}${prefix}/blog/${post.slug}`;
+  const canonicalUrl = `${siteOrigin}${prefix}/blog/${post.slug}/`;
   const title = post.titleMap[locale];
   const description = post.descriptionMap[locale];
 
@@ -77,17 +77,17 @@ const BlogPost: FunctionalComponent<Props> = ({ locale, post }) => {
         <link
           rel="alternate"
           hrefLang="en"
-          href={`${siteOrigin}/blog/${post.slug}`}
+          href={`${siteOrigin}/blog/${post.slug}/`}
         />
         <link
           rel="alternate"
           hrefLang="es"
-          href={`${siteOrigin}/es/blog/${post.slug}`}
+          href={`${siteOrigin}/es/blog/${post.slug}/`}
         />
         <link
           rel="alternate"
           hrefLang="x-default"
-          href={`${siteOrigin}/blog/${post.slug}`}
+          href={`${siteOrigin}/blog/${post.slug}/`}
         />
         <script
           async
@@ -188,7 +188,7 @@ const BlogPost: FunctionalComponent<Props> = ({ locale, post }) => {
               {relatedPosts.map((related) => (
                 <article class="blog-post-card">
                   <h2>
-                    <a href={`${prefix}/blog/${related.slug}`}>
+                    <a href={`${prefix}/blog/${related.slug}/`}>
                       {related.titleMap[locale]
                         .replace(' — ShrinkImg Blog', '')
                         .replace(' — Blog de ShrinkImg', '')}
@@ -198,7 +198,7 @@ const BlogPost: FunctionalComponent<Props> = ({ locale, post }) => {
                   <p>{related.descriptionMap[locale].slice(0, 160)}...</p>
                   <a
                     class="blog-read-more"
-                    href={`${prefix}/blog/${related.slug}`}
+                    href={`${prefix}/blog/${related.slug}/`}
                   >
                     {t('blog.readMore')}
                   </a>

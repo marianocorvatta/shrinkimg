@@ -181,7 +181,7 @@ const WebpGuide2026En: FunctionalComponent = () => (
 
     <p>
       For a full format comparison including use cases, see our{' '}
-      <a href="/blog/jpg-vs-png-vs-webp-vs-avif">
+      <a href="/blog/jpg-vs-png-vs-webp-vs-avif/">
         JPG vs PNG vs WebP vs AVIF guide
       </a>
       .
@@ -208,7 +208,7 @@ const WebpGuide2026En: FunctionalComponent = () => (
 
     <h3 id="performance-sensitive-pages">Performance-Sensitive Pages</h3>
     <p>
-      Pages where <a href="/blog/core-web-vitals-images">Core Web Vitals</a>{' '}
+      Pages where <a href="/blog/core-web-vitals-images/">Core Web Vitals</a>{' '}
       performance is a priority — landing pages, product pages, checkout —
       benefit most from WebP. The file size reduction directly improves LCP
       (Largest Contentful Paint) by reducing the time to download the largest
@@ -228,7 +228,7 @@ const WebpGuide2026En: FunctionalComponent = () => (
     <p>
       For bulk conversion of an entire image library, ShrinkImg accepts multiple
       files in a single session. See our{' '}
-      <a href="/blog/compress-images-bulk">bulk compression workflow guide</a>{' '}
+      <a href="/blog/compress-images-bulk/">bulk compression workflow guide</a>{' '}
       for a systematic approach to converting large image sets.
     </p>
 
@@ -261,7 +261,7 @@ const WebpGuide2026En: FunctionalComponent = () => (
 
     <p>
       For a complete guide to WordPress image optimization, see our{' '}
-      <a href="/blog/optimize-images-wordpress">
+      <a href="/blog/optimize-images-wordpress/">
         WordPress image optimization guide
       </a>
       .
