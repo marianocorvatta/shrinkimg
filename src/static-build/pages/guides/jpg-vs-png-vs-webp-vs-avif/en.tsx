@@ -110,7 +110,7 @@ const JpgVsPngVsWebpVsAvifEn: FunctionalComponent = () => (
       transparency, and animation — all in one format. Lossy WebP files are
       typically 25–35% smaller than equivalent JPGs, and lossless WebP is about
       25% smaller than PNG. Learn more in our{' '}
-      <a href="/guides/what-is-webp">What is WebP</a> guide.
+      <a href="/guides/what-is-webp/">What is WebP</a> guide.
     </p>
     <h3>When to Use WebP</h3>
     <ul>
@@ -179,7 +179,7 @@ const JpgVsPngVsWebpVsAvifEn: FunctionalComponent = () => (
     <p>
       No matter which format you choose, compressing your images before
       publishing is the single most impactful optimization you can make. See our{' '}
-      <a href="/guides/compress-images-for-web">
+      <a href="/guides/compress-images-for-web/">
         guide to compressing images for the web
       </a>{' '}
       for practical tips.

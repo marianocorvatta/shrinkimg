@@ -57,7 +57,7 @@ const CompressImagesForWebEn: FunctionalComponent = () => (
       <li>
         <strong>Use WebP when possible</strong> — WordPress 5.8+ supports WebP
         uploads natively. WebP files are 25–35% smaller than JPGs. Check our{' '}
-        <a href="/guides/what-is-webp">WebP guide</a> for details.
+        <a href="/guides/what-is-webp/">WebP guide</a> for details.
       </li>
     </ul>
 
@@ -122,7 +122,7 @@ const CompressImagesForWebEn: FunctionalComponent = () => (
     <h3>Choose the Right Format</h3>
     <p>
       For a deeper dive into format selection, see our{' '}
-      <a href="/guides/jpg-vs-png-vs-webp-vs-avif">
+      <a href="/guides/jpg-vs-png-vs-webp-vs-avif/">
         JPG vs PNG vs WebP vs AVIF comparison
       </a>
       . In short: use WebP or AVIF for photos, PNG for graphics with

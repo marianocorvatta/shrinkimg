@@ -108,7 +108,7 @@ const WhatIsWebpEs: FunctionalComponent = () => (
     </ul>
     <p>
       Para una comparación completa de formatos, consultá nuestra{' '}
-      <a href="/es/guides/jpg-vs-png-vs-webp-vs-avif">
+      <a href="/es/guides/jpg-vs-png-vs-webp-vs-avif/">
         guía JPG vs PNG vs WebP vs AVIF
       </a>
       .
@@ -150,7 +150,7 @@ const WhatIsWebpEs: FunctionalComponent = () => (
       <li>
         Cualquier escenario donde quieras un formato moderno único y bien
         soportado. Consultá nuestra{' '}
-        <a href="/es/guides/compress-images-for-web">
+        <a href="/es/guides/compress-images-for-web/">
           guía de optimización web
         </a>{' '}
         para tamaños y configuraciones recomendadas.

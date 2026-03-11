@@ -116,7 +116,7 @@ const JpgVsPngVsWebpVsAvifEs: FunctionalComponent = () => (
       transparencia y animación — todo en un formato. Los archivos WebP con
       pérdida son típicamente 25–35% más pequeños que los JPG equivalentes, y
       WebP sin pérdida es un 25% más pequeño que PNG. Aprendé más en nuestra{' '}
-      <a href="/es/guides/what-is-webp">guía sobre WebP</a>.
+      <a href="/es/guides/what-is-webp/">guía sobre WebP</a>.
     </p>
     <h3>Cuándo Usar WebP</h3>
     <ul>
@@ -187,7 +187,7 @@ const JpgVsPngVsWebpVsAvifEs: FunctionalComponent = () => (
       Sin importar qué formato elijas, comprimir tus imágenes antes de
       publicarlas es la optimización más impactante que podés hacer. Consultá
       nuestra{' '}
-      <a href="/es/guides/compress-images-for-web">
+      <a href="/es/guides/compress-images-for-web/">
         guía para comprimir imágenes para la web
       </a>{' '}
       para consejos prácticos.

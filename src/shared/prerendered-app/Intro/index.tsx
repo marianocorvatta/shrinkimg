@@ -417,19 +417,19 @@ export default class Intro extends Component<Props, State> {
             </svg>
             <div class={style.footerPadding}>
               <footer class={style.footerItems}>
-                <a class={style.footerLink} href={`${prefix}/privacy`}>
+                <a class={style.footerLink} href={`${prefix}/privacy/`}>
                   {t('footer.privacy')}
                 </a>
-                <a class={style.footerLink} href={`${prefix}/terms`}>
+                <a class={style.footerLink} href={`${prefix}/terms/`}>
                   {t('footer.terms')}
                 </a>
                 <a
                   class={style.footerLink}
-                  href={`${prefix}/guides/compress-images-online`}
+                  href={`${prefix}/guides/compress-images-online/`}
                 >
                   {t('footer.guides')}
                 </a>
-                <a class={style.footerLink} href={`${prefix}/blog`}>
+                <a class={style.footerLink} href={`${prefix}/blog/`}>
                   {t('footer.blog')}
                 </a>
                 <a

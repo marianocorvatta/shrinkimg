@@ -102,7 +102,7 @@ const WhatIsWebpEn: FunctionalComponent = () => (
     </ul>
     <p>
       For a complete format comparison, check our{' '}
-      <a href="/guides/jpg-vs-png-vs-webp-vs-avif">
+      <a href="/guides/jpg-vs-png-vs-webp-vs-avif/">
         JPG vs PNG vs WebP vs AVIF guide
       </a>
       .
@@ -140,7 +140,8 @@ const WhatIsWebpEn: FunctionalComponent = () => (
       <li>Animated content as a replacement for GIF.</li>
       <li>
         Any scenario where you want a single, well-supported modern format. See
-        our <a href="/guides/compress-images-for-web">web optimization guide</a>{' '}
+        our{' '}
+        <a href="/guides/compress-images-for-web/">web optimization guide</a>{' '}
         for recommended sizes and settings.
       </li>
     </ul>

@@ -106,7 +106,9 @@ const CompressImagesOnlineEn: FunctionalComponent = () => (
       <li>
         <strong>Use the right format</strong> — JPG for photos, PNG for graphics
         with transparency, WebP or AVIF for the best of both worlds. See our{' '}
-        <a href="/guides/jpg-vs-png-vs-webp-vs-avif">format comparison guide</a>{' '}
+        <a href="/guides/jpg-vs-png-vs-webp-vs-avif/">
+          format comparison guide
+        </a>{' '}
         for details.
       </li>
       <li>
